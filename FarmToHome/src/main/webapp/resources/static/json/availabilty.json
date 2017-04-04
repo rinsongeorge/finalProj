@@ -1,0 +1,226 @@
+{
+	"category": [
+		{
+			"categoryID": "10001",
+			"categoryName": "Greens",
+			"description": "Greens",
+			"categoryImage": "na",
+			"availableProducts": "5"
+		},
+		{
+			"categoryID": "10002",
+			"categoryName": "Vegetables",
+			"description": "Vegetables",
+			"categoryImage": "na",
+			"availableProducts": "15"
+		},
+		{
+			"categoryID": "10003",
+			"categoryName": "Millets",
+			"description": "Millets",
+			"categoryImage": "na",
+			"availableProducts": "4"
+		},
+		{
+			"categoryID": "1004",
+			"categoryName": "Pulses",
+			"description": "Greens",
+			"categoryImage": "na",
+			"availableProducts": "7"
+		},
+		{
+			"categoryID": "10005",
+			"categoryName": "Rice",
+			"description": "Rice",
+			"categoryImage": "na",
+			"availableProducts": "7"
+		},
+		{
+			"categoryID": "10006",
+			"categoryName": "Jaggery",
+			"description": "Jaggery",
+			"categoryImage": "na",
+			"availableProducts": "2"
+		},
+		{
+			"categoryID": "10007",
+			"categoryName": "Fruits",
+			"description": "Fruits",
+			"categoryImage": "na",
+			"availableProducts": "10"
+		},
+		{
+			"categoryID": "10008",
+			"categoryName": "Spices",
+			"description": "Spices",
+			"categoryImage": "na",
+			"availableProducts": "9"
+		},
+		{
+			"categoryID": "10009",
+			"categoryName": "Eggs",
+			"description": "Eggs",
+			"categoryImage": "na",
+			"availableProducts": "2"
+		},
+		{
+			"categoryID": "10010",
+			"categoryName": "Oil",
+			"description": "Oil",
+			"categoryImage": "na",
+			"availableProducts": "3"
+		},
+		{
+			"categoryID": "10011",
+			"categoryName": "Plants",
+			"description": "Plants",
+			"categoryImage": "na",
+			"availableProducts": "0"
+		},
+		{
+			"categoryID": "10012",
+			"categoryName": "Others",
+			"description": "Others",
+			"categoryImage": "na",
+			"availableProducts": "10"
+		}
+	],
+	"topProducts": [
+		{
+			"productID": "101",
+			"productName": "Vazhakoombu (Banana flower)",
+			"productUnitPrice": "30.00",
+			"currency": "INR",
+			"productUnitWeight": "1 ps",
+			"productDescription": "Banana flower is an inherent to Andes Mountains of Colombia. The flower is large which grows from the end of the bunch of bananas and has a dark purple red blossom. The small flowers would be found on the inside part which would turn into the banana. It is starchy and bitter in taste. It is rich in Vitamin C and Vitamin A and can reduce the pains. It is included in the diet as the vegetable.",
+			"productImage": "resources/static/images/Cabbage.jpg",
+			"productThumbImage": "na",
+			"categoryID": "10002"
+		},
+		{
+			"productID": "112",
+			"productName": "Kovakka (Coccinia grandis)",
+			"productUnitPrice": "33.00",
+			"currency": "INR",
+			"productUnitWeight": "500 gm",
+			"productDescription": "A variety of recipes from all over the world list rashmato, the fruit, as the main ingredient. They are best when cooked, and are often compared to bitter melon. The fruit is commonly eaten in Indian cuisine. People of Indonesia and other Southeast Asian countries also consume the fruit and leaves.",
+			"productImage": "resources/static/images/Cauliflower.jpg",
+			"productThumbImage": "na",
+			"categoryID": "10002"
+		},
+		{
+			"productID": "122",
+			"productName": "Kadachakka (Breadfruit)",
+			"productUnitPrice": "40.00",
+			"currency": "INR",
+			"productUnitWeight": "1 kg",
+			"productDescription": "Breadfruit is a species of flowering tree in the mulberry and jackfruit family. In India, fritters of breadfruit, called jeev kadge phodi in Konkani or kadachakka varuthath in Malayalam are a local delicacy in coastal Karnataka and Kerala.",
+			"productImage": "resources/static/images/Coconuts.jpg",
+			"productThumbImage": "na",
+			"categoryID": "10002"
+		}
+	],
+	"newProducts": [
+		{
+			"productID": "140",
+			"productName": "Vazhakoombu (Banana flower)",
+			"productUnitPrice": "30.00",
+			"currency": "INR",
+			"productUnitWeight": "1 ps",
+			"productDescription": "Banana flower is an inherent to Andes Mountains of Colombia. The flower is large which grows from the end of the bunch of bananas and has a dark purple red blossom. The small flowers would be found on the inside part which would turn into the banana. It is starchy and bitter in taste. It is rich in Vitamin C and Vitamin A and can reduce the pains. It is included in the diet as the vegetable.",
+			"productImage": "resources/static/images/hen_egg.jpg",
+			"productThumbImage": "na",
+			"categoryID": "10002"
+		},
+		{
+			"productID": "145",
+			"productName": "Kovakka (Coccinia grandis)",
+			"productUnitPrice": "33.00",
+			"currency": "INR",
+			"productUnitWeight": "500 gm",
+			"productDescription": "A variety of recipes from all over the world list rashmato, the fruit, as the main ingredient. They are best when cooked, and are often compared to bitter melon. The fruit is commonly eaten in Indian cuisine. People of Indonesia and other Southeast Asian countries also consume the fruit and leaves.",
+			"productImage": "resources/static/images/papaya.jpg",
+			"productThumbImage": "na",
+			"categoryID": "10002"
+		},
+		{
+			"productID": "147",
+			"productName": "Kadachakka (Breadfruit)",
+			"productUnitPrice": "40.00",
+			"currency": "INR",
+			"productUnitWeight": "1 kg",
+			"productDescription": "Breadfruit is a species of flowering tree in the mulberry and jackfruit family. In India, fritters of breadfruit, called jeev kadge phodi in Konkani or kadachakka varuthath in Malayalam are a local delicacy in coastal Karnataka and Kerala.",
+			"productImage": "resources/static/images/pumpkin.jpg",
+			"productThumbImage": "na",
+			"categoryID": "10002"
+		},
+		{
+			"productID": "148",
+			"productName": "Vazhakoombu (Banana flower)",
+			"productUnitPrice": "30.00",
+			"currency": "INR",
+			"productUnitWeight": "1 ps",
+			"productDescription": "Banana flower is an inherent to Andes Mountains of Colombia. The flower is large which grows from the end of the bunch of bananas and has a dark purple red blossom. The small flowers would be found on the inside part which would turn into the banana. It is starchy and bitter in taste. It is rich in Vitamin C and Vitamin A and can reduce the pains. It is included in the diet as the vegetable.",
+			"productImage": "resources/static/images/tomato.jpg",
+			"productThumbImage": "na",
+			"categoryID": "10002"
+		},
+		{
+			"productID": "149",
+			"productName": "Kovakka (Coccinia grandis)",
+			"productUnitPrice": "33.00",
+			"currency": "INR",
+			"productUnitWeight": "500 gm",
+			"productDescription": "A variety of recipes from all over the world list rashmato, the fruit, as the main ingredient. They are best when cooked, and are often compared to bitter melon. The fruit is commonly eaten in Indian cuisine. People of Indonesia and other Southeast Asian countries also consume the fruit and leaves.",
+			"productImage": "resources/static/images/celeri.jpg",
+			"productThumbImage": "na",
+			"categoryID": "10002"
+		},
+		{
+			"productID": "150",
+			"productName": "Kadachakka (Breadfruit)",
+			"productUnitPrice": "40.00",
+			"currency": "INR",
+			"productUnitWeight": "1 kg",
+			"productDescription": "Breadfruit is a species of flowering tree in the mulberry and jackfruit family. In India, fritters of breadfruit, called jeev kadge phodi in Konkani or kadachakka varuthath in Malayalam are a local delicacy in coastal Karnataka and Kerala.",
+			"productImage": "resources/static/images/pineapple.jpg",
+			"productThumbImage": "na",
+			"categoryID": "10002"
+		}
+	],
+	"recommendedProducts": [
+		{
+			"productID": "101",
+			"productName": "Vazhakoombu (Banana flower)",
+			"productUnitPrice": "30.00",
+			"currency": "INR",
+			"productUnitWeight": "1 ps",
+			"productDescription": "Banana flower is an inherent to Andes Mountains of Colombia. The flower is large which grows from the end of the bunch of bananas and has a dark purple red blossom. The small flowers would be found on the inside part which would turn into the banana. It is starchy and bitter in taste. It is rich in Vitamin C and Vitamin A and can reduce the pains. It is included in the diet as the vegetable.",
+			"productImage": "resources/static/images/Jackfruit.jpg",
+			"productThumbImage": "na",
+			"categoryID": "10002"
+		},
+		{
+			"productID": "112",
+			"productName": "Kovakka (Coccinia grandis)",
+			"productUnitPrice": "33.00",
+			"currency": "INR",
+			"productUnitWeight": "500 gm",
+			"productDescription": "A variety of recipes from all over the world list rashmato, the fruit, as the main ingredient. They are best when cooked, and are often compared to bitter melon. The fruit is commonly eaten in Indian cuisine. People of Indonesia and other Southeast Asian countries also consume the fruit and leaves.",
+			"productImage": "resources/static/images/garlic.jpg",
+			"productThumbImage": "na",
+			"categoryID": "10002"
+		},
+		{
+			"productID": "122",
+			"productName": "Kadachakka (Breadfruit)",
+			"productUnitPrice": "40.00",
+			"currency": "INR",
+			"productUnitWeight": "1 kg",
+			"productDescription": "Breadfruit is a species of flowering tree in the mulberry and jackfruit family. In India, fritters of breadfruit, called jeev kadge phodi in Konkani or kadachakka varuthath in Malayalam are a local delicacy in coastal Karnataka and Kerala.",
+			"productImage": "resources/static/images/ladies_finger.jpg",
+			"productThumbImage": "na",
+			"categoryID": "10002"
+		}
+	]
+}

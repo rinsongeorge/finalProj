@@ -1,0 +1,417 @@
+2017-03-21 10:28:31 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 10:28:31 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 10:28:31 IST 2017]; root of context hierarchy
+2017-03-21 10:28:31 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [208] - Registering annotated classes: [class com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 10:28:32 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 10:28:32 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 10:28:32 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 936 ms
+2017-03-21 10:28:40 com.farmtohome.controller.WelcomeController [20] - Entering to WelcomeController
+2017-03-21 10:43:45 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 10:43:45 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 10:43:45 IST 2017]; root of context hierarchy
+2017-03-21 10:43:45 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [208] - Registering annotated classes: [class com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 10:43:45 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 10:43:45 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 10:43:45 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 10:43:45 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 608 ms
+2017-03-21 10:43:52 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 10:43:57 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 10:44:05 com.farmtohome.controller.WelcomeController [25] - Rendering Product Review Page
+2017-03-21 10:45:00 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/Revi] in DispatcherServlet with name 'dispatcher'
+2017-03-21 10:45:04 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 10:47:12 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/ss] in DispatcherServlet with name 'dispatcher'
+2017-03-21 10:57:52 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 10:57:52 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 10:57:52 IST 2017]; root of context hierarchy
+2017-03-21 10:57:52 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 10:57:53 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 10:57:53 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/404],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.error404()
+2017-03-21 10:57:53 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 10:57:53 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 10:57:53 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 661 ms
+2017-03-21 10:58:09 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 10:58:17 com.farmtohome.controller.WelcomeController [25] - Rendering Product Review Page
+2017-03-21 11:50:59 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 11:50:59 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 11:50:59 IST 2017]; root of context hierarchy
+2017-03-21 11:50:59 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 11:51:00 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 11:51:00 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 11:51:00 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/404],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.error404()
+2017-03-21 11:51:00 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 11:51:00 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 576 ms
+2017-03-21 11:51:15 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 11:51:20 com.farmtohome.controller.WelcomeController [25] - Rendering Product Review Page
+2017-03-21 11:51:24 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/Revie] in DispatcherServlet with name 'dispatcher'
+2017-03-21 11:51:31 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/Rev] in DispatcherServlet with name 'dispatcher'
+2017-03-21 11:51:39 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 11:51:43 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/ghhghgfh] in DispatcherServlet with name 'dispatcher'
+2017-03-21 11:51:45 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 11:51:48 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/ghjghjgh] in DispatcherServlet with name 'dispatcher'
+2017-03-21 11:51:58 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 11:54:58 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 11:54:58 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 11:54:58 IST 2017]; root of context hierarchy
+2017-03-21 11:54:58 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 11:54:59 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 11:54:59 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 11:54:59 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/404],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.error404()
+2017-03-21 11:54:59 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 11:54:59 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 609 ms
+2017-03-21 11:55:07 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 11:55:14 com.farmtohome.controller.WelcomeController [25] - Rendering Product Review Page
+2017-03-21 11:55:17 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/Reviewhhhh] in DispatcherServlet with name 'dispatcher'
+2017-03-21 11:59:28 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/images/logo.png] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:00:06 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/index.html] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:00:12 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/Reviewhhhh] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:00:13 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/Reviewhhhh] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:00:13 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/Reviewhhhh] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:00:16 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/index.html] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:00:20 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 12:00:21 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/index.html] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:00:26 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 12:03:59 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 12:03:59 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 12:03:59 IST 2017]; root of context hierarchy
+2017-03-21 12:03:59 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 12:03:59 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 12:03:59 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 12:03:59 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/404],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.error404()
+2017-03-21 12:03:59 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 12:03:59 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 661 ms
+2017-03-21 12:04:27 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 12:12:15 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 12:12:15 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 12:12:15 IST 2017]; root of context hierarchy
+2017-03-21 12:12:15 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 12:12:15 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 12:12:15 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 12:12:15 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 12:12:15 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 515 ms
+2017-03-21 12:12:21 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 12:12:29 com.farmtohome.controller.WelcomeController [25] - Rendering Product Review Page
+2017-03-21 12:12:34 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/Reviewf] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:12:37 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 12:16:31 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 12:16:31 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 12:16:31 IST 2017]; root of context hierarchy
+2017-03-21 12:16:31 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 12:16:31 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 12:16:31 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 12:16:31 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 12:16:31 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 12:16:31 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 684 ms
+2017-03-21 12:16:32 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 12:16:38 com.farmtohome.controller.WelcomeController [25] - Rendering Product Review Page
+2017-03-21 12:16:42 com.farmtohome.controller.WelcomeController [31] - Rendering Product Products Page
+2017-03-21 12:16:43 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/css/bootstrap.css] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:16:43 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/json/products.json] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:18:19 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 12:18:19 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 12:18:19 IST 2017]; root of context hierarchy
+2017-03-21 12:18:19 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 12:18:20 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 12:18:20 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 12:18:20 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 12:18:20 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 12:18:20 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 640 ms
+2017-03-21 12:18:20 com.farmtohome.controller.WelcomeController [31] - Rendering Product Products Page
+2017-03-21 12:18:21 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/css/bootstrap.css] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:18:21 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/json/products.json] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:18:25 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/css/bootstrap.css] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:18:33 com.farmtohome.controller.WelcomeController [31] - Rendering Product Products Page
+2017-03-21 12:18:33 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/css/bootstrap.css] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:18:33 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/js/cbpViewModeSwitch.js] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:18:33 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/js/classie.js] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:19:38 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 12:19:38 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 12:19:38 IST 2017]; root of context hierarchy
+2017-03-21 12:19:38 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 12:19:38 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 12:19:38 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 12:19:38 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 12:19:38 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 12:19:38 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 633 ms
+2017-03-21 12:19:41 com.farmtohome.controller.WelcomeController [31] - Rendering Product Products Page
+2017-03-21 12:19:42 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/js/cbpViewModeSwitch.js] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:19:42 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/js/classie.js] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:21:03 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 12:21:03 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 12:21:03 IST 2017]; root of context hierarchy
+2017-03-21 12:21:03 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 12:21:03 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 12:21:03 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 12:21:03 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 12:21:03 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 12:21:03 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 639 ms
+2017-03-21 12:21:09 com.farmtohome.controller.WelcomeController [31] - Rendering Product Products Page
+2017-03-21 12:21:30 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/apparel.html] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:25:46 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/apparel.html] in DispatcherServlet with name 'dispatcher'
+2017-03-21 12:26:03 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 12:26:03 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 12:26:03 IST 2017]; root of context hierarchy
+2017-03-21 12:26:03 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 12:26:03 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 12:26:03 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 12:26:03 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 12:26:03 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 12:26:03 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 659 ms
+2017-03-21 12:26:05 com.farmtohome.controller.WelcomeController [31] - Rendering Product Products Page
+2017-03-21 12:26:22 com.farmtohome.controller.WelcomeController [25] - Rendering Product Review Page
+2017-03-21 12:26:26 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 12:26:58 com.farmtohome.controller.WelcomeController [25] - Rendering Product Review Page
+2017-03-21 12:31:06 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 12:31:09 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/g] in DispatcherServlet with name 'dispatcher'
+2017-03-21 14:23:14 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 14:23:14 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 14:23:14 IST 2017]; root of context hierarchy
+2017-03-21 14:23:14 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 14:23:14 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 14:23:14 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 14:23:14 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 14:23:14 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 14:23:14 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 14:23:14 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 695 ms
+2017-03-21 14:23:18 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 14:23:29 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:23:38 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:25:43 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 14:25:43 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 14:25:43 IST 2017]; root of context hierarchy
+2017-03-21 14:25:43 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 14:25:44 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 14:25:44 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 14:25:44 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 14:25:44 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 14:25:44 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 14:25:44 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 669 ms
+2017-03-21 14:25:45 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:25:48 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:25:49 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:25:50 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:25:50 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:25:50 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:25:50 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:25:50 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:26:07 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:26:46 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 14:27:28 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:29:26 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 14:29:26 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 14:29:26 IST 2017]; root of context hierarchy
+2017-03-21 14:29:26 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 14:29:26 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 14:29:26 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 14:29:27 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 14:29:27 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 14:29:27 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 14:29:27 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 655 ms
+2017-03-21 14:29:29 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:31:02 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 14:31:02 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 14:31:02 IST 2017]; root of context hierarchy
+2017-03-21 14:31:02 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 14:31:03 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 14:31:03 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 14:31:03 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 14:31:03 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 14:31:03 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 14:31:03 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 645 ms
+2017-03-21 14:31:06 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:31:59 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:33:48 com.farmtohome.controller.WelcomeController [25] - Rendering Product Review Page
+2017-03-21 14:34:05 com.farmtohome.controller.WelcomeController [31] - Rendering Product Products Page
+2017-03-21 14:34:37 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 14:34:44 com.farmtohome.controller.WelcomeController [31] - Rendering Product Products Page
+2017-03-21 14:35:54 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:38:32 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 14:38:32 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 14:38:32 IST 2017]; root of context hierarchy
+2017-03-21 14:38:32 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 14:38:32 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 14:38:32 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 14:38:32 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 14:38:32 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 14:38:32 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 14:38:32 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 609 ms
+2017-03-21 14:38:37 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 14:38:43 com.farmtohome.controller.WelcomeController [25] - Rendering Product Review Page
+2017-03-21 14:38:56 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:38:59 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:39:51 com.farmtohome.controller.WelcomeController [37] - Rendering Product checkout Products Page
+2017-03-21 14:40:01 com.farmtohome.controller.WelcomeController [31] - Rendering Product Products Page
+2017-03-21 14:40:07 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 14:43:57 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 14:43:57 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 14:43:57 IST 2017]; root of context hierarchy
+2017-03-21 14:43:57 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 14:43:57 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 14:43:57 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 14:43:57 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 14:43:57 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 14:43:57 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Contact],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.contact()
+2017-03-21 14:43:57 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 14:43:57 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 612 ms
+2017-03-21 14:44:00 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 14:44:14 com.farmtohome.controller.WelcomeController [43] - Rendering Product checkout contact Page
+2017-03-21 14:50:41 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 14:50:41 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 14:50:41 IST 2017]; root of context hierarchy
+2017-03-21 14:50:41 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 14:50:41 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 14:50:42 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 14:50:42 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 14:50:42 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 14:50:42 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 14:50:42 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Contact],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.contact()
+2017-03-21 14:50:42 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 732 ms
+2017-03-21 14:50:46 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 14:51:16 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 14:51:18 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 14:51:42 com.farmtohome.controller.WelcomeController [31] - Rendering Product Products Page
+2017-03-21 15:00:35 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 15:00:35 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 15:00:35 IST 2017]; root of context hierarchy
+2017-03-21 15:00:35 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 15:00:36 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 15:00:36 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.login()
+2017-03-21 15:00:36 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 15:00:36 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 15:00:36 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 15:00:36 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Contact],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.contact()
+2017-03-21 15:00:36 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 15:00:36 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 668 ms
+2017-03-21 15:00:38 com.farmtohome.controller.WelcomeController [25] - Rendering Product Review Page
+2017-03-21 15:00:43 com.farmtohome.controller.WelcomeController [49] - Rendering Product checkout contact Page
+2017-03-21 15:01:08 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/register.html] in DispatcherServlet with name 'dispatcher'
+2017-03-21 15:07:35 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 15:07:35 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 15:07:35 IST 2017]; root of context hierarchy
+2017-03-21 15:07:35 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 15:07:35 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 15:07:35 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.loginPage()
+2017-03-21 15:07:35 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Join],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.registerPage()
+2017-03-21 15:07:35 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 15:07:35 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 15:07:35 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 15:07:35 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Contact],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.contact()
+2017-03-21 15:07:35 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 15:07:35 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 596 ms
+2017-03-21 15:07:37 com.farmtohome.controller.WelcomeController [49] - Rendering Product checkout contact Page
+2017-03-21 15:07:42 com.farmtohome.controller.WelcomeController [55] - Rendering Product checkout Register Page
+2017-03-21 15:11:55 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 15:11:55 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 15:11:55 IST 2017]; root of context hierarchy
+2017-03-21 15:11:55 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 15:11:55 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 15:11:55 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.loginPage()
+2017-03-21 15:11:55 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Join],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.registerPage()
+2017-03-21 15:11:55 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 15:11:55 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 15:11:55 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 15:11:55 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Contact],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.contact()
+2017-03-21 15:11:55 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 15:11:55 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 616 ms
+2017-03-21 15:11:59 com.farmtohome.controller.WelcomeController [55] - Rendering Product checkout Register Page
+2017-03-21 15:14:22 com.farmtohome.controller.WelcomeController [49] - Rendering Product checkout contact Page
+2017-03-21 15:35:49 com.farmtohome.controller.WelcomeController [49] - Rendering Product checkout contact Page
+2017-03-21 15:36:18 org.springframework.web.servlet.PageNotFound [1118] - No mapping found for HTTP request with URI [/FarmToHome/Loginkl] in DispatcherServlet with name 'dispatcher'
+2017-03-21 18:21:39 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 18:21:39 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 18:21:39 IST 2017]; root of context hierarchy
+2017-03-21 18:21:39 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 18:21:39 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 18:21:39 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.loginPage()
+2017-03-21 18:21:39 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 18:21:39 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Join],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.registerPage()
+2017-03-21 18:21:39 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 18:21:39 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 18:21:39 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 18:21:39 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Contact],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.contact()
+2017-03-21 18:21:39 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Admin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.adminPage()
+2017-03-21 18:21:39 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 651 ms
+2017-03-21 18:21:47 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 18:21:53 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:24:46 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 18:24:46 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 18:24:46 IST 2017]; root of context hierarchy
+2017-03-21 18:24:46 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 18:24:46 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 18:24:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.loginPage()
+2017-03-21 18:24:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Join],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.registerPage()
+2017-03-21 18:24:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 18:24:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 18:24:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 18:24:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Contact],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.contact()
+2017-03-21 18:24:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Admin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.adminPage()
+2017-03-21 18:24:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 18:24:46 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 650 ms
+2017-03-21 18:25:02 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:27:22 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 18:27:22 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 18:27:22 IST 2017]; root of context hierarchy
+2017-03-21 18:27:22 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 18:27:23 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 18:27:23 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.loginPage()
+2017-03-21 18:27:23 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 18:27:23 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 18:27:23 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Contact],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.contact()
+2017-03-21 18:27:23 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 18:27:23 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Join],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.registerPage()
+2017-03-21 18:27:23 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 18:27:23 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Admin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.adminPage()
+2017-03-21 18:27:23 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 657 ms
+2017-03-21 18:27:24 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:28:31 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:30:47 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 18:30:47 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 18:30:47 IST 2017]; root of context hierarchy
+2017-03-21 18:30:47 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 18:30:48 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 18:30:48 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.loginPage()
+2017-03-21 18:30:48 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 18:30:48 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Join],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.registerPage()
+2017-03-21 18:30:48 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 18:30:48 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 18:30:48 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 18:30:48 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Contact],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.contact()
+2017-03-21 18:30:48 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Admin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.adminPage()
+2017-03-21 18:30:48 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 632 ms
+2017-03-21 18:30:52 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:31:35 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 18:32:38 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:37:20 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:37:50 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:38:57 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:46:15 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 18:46:15 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 18:46:15 IST 2017]; root of context hierarchy
+2017-03-21 18:46:15 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 18:46:16 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 18:46:16 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.loginPage()
+2017-03-21 18:46:16 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Join],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.registerPage()
+2017-03-21 18:46:16 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 18:46:16 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 18:46:16 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 18:46:16 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Contact],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.contact()
+2017-03-21 18:46:16 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Admin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.adminPage()
+2017-03-21 18:46:16 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 18:46:16 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 626 ms
+2017-03-21 18:46:17 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:47:12 com.farmtohome.controller.WelcomeController [19] - Rendering Welcome Page
+2017-03-21 18:50:53 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 18:50:53 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 18:50:53 IST 2017]; root of context hierarchy
+2017-03-21 18:50:53 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 18:50:53 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 18:50:53 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.loginPage()
+2017-03-21 18:50:53 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 18:50:53 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Join],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.registerPage()
+2017-03-21 18:50:53 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 18:50:53 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 18:50:53 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 18:50:53 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Contact],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.contact()
+2017-03-21 18:50:53 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Admin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.adminPage()
+2017-03-21 18:50:53 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 718 ms
+2017-03-21 18:50:54 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:50:58 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:01 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:02 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:02 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:02 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:02 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:02 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:03 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:21 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:24 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:24 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:24 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:24 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:24 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:46 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-21 18:53:46 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Tue Mar 21 18:53:46 IST 2017]; root of context hierarchy
+2017-03-21 18:53:46 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [228] - Successfully resolved class for [com.farmtohome.configuration.SpringWebConfig]
+2017-03-21 18:53:46 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-21 18:53:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.loginPage()
+2017-03-21 18:53:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Join],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.registerPage()
+2017-03-21 18:53:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/List],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.products()
+2017-03-21 18:53:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Checkout],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.checkoutProducts()
+2017-03-21 18:53:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-21 18:53:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Contact],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.contact()
+2017-03-21 18:53:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Admin],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.adminPage()
+2017-03-21 18:53:46 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/Review],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.productReviewPage()
+2017-03-21 18:53:46 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 685 ms
+2017-03-21 18:53:47 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page
+2017-03-21 18:53:53 com.farmtohome.controller.WelcomeController [61] - Rendering Product checkout Admin Page

@@ -1,0 +1,36 @@
+2017-03-20 18:37:13 -  error Entering to WelcomeController
+2017-03-20 18:38:44 - FrameworkServlet 'dispatcher': initialization started
+2017-03-20 18:38:44 - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Mar 20 18:38:44 IST 2017]; root of context hierarchy
+2017-03-20 18:38:44 - Registering annotated classes: [class com.farmtohome.configuration.SpringWebConfig]
+2017-03-20 18:38:44 - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-20 18:38:44 - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-20 18:38:44 - FrameworkServlet 'dispatcher': initialization completed in 826 ms
+2017-03-20 18:38:46 - Entering to WelcomeController
+2017-03-20 18:38:46 -  error Entering to WelcomeController
+2017-03-20 18:42:50 - FrameworkServlet 'dispatcher': initialization started
+2017-03-20 18:42:50 - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Mar 20 18:42:50 IST 2017]; root of context hierarchy
+2017-03-20 18:42:51 - Registering annotated classes: [class com.farmtohome.configuration.SpringWebConfig]
+2017-03-20 18:42:52 - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-20 18:42:52 - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-20 18:42:52 - FrameworkServlet 'dispatcher': initialization completed in 1751 ms
+2017-03-20 18:42:52 - Entering to WelcomeController
+2017-03-20 18:42:52 -  error Entering to WelcomeController
+2017-03-20 18:42:55 - Entering to WelcomeController
+2017-03-20 18:42:55 -  error Entering to WelcomeController
+2017-03-20 18:46:16 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-20 18:46:16 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Mar 20 18:46:16 IST 2017]; root of context hierarchy
+2017-03-20 18:46:16 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [208] - Registering annotated classes: [class com.farmtohome.configuration.SpringWebConfig]
+2017-03-20 18:46:16 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-20 18:46:17 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-20 18:46:17 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 1209 ms
+2017-03-20 18:46:17 com.farmtohome.controller.WelcomeController [20] - Entering to WelcomeController
+2017-03-20 18:46:17 com.farmtohome.controller.WelcomeController [22] -  error Entering to WelcomeController
+2017-03-20 19:01:34 com.farmtohome.controller.WelcomeController [20] - Entering to WelcomeController
+2017-03-20 19:01:34 com.farmtohome.controller.WelcomeController [22] -  error Entering to WelcomeController
+2017-03-20 19:10:23 org.springframework.web.servlet.DispatcherServlet [479] - FrameworkServlet 'dispatcher': initialization started
+2017-03-20 19:10:23 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [513] - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Mar 20 19:10:23 IST 2017]; root of context hierarchy
+2017-03-20 19:10:23 org.springframework.web.context.support.AnnotationConfigWebApplicationContext [208] - Registering annotated classes: [class com.farmtohome.configuration.SpringWebConfig]
+2017-03-20 19:10:24 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [315] - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-20 19:10:25 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [181] - Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.farmtohome.controller.WelcomeController.welcomePage()
+2017-03-20 19:10:25 org.springframework.web.servlet.DispatcherServlet [498] - FrameworkServlet 'dispatcher': initialization completed in 1802 ms
+2017-03-20 19:15:11 com.farmtohome.controller.WelcomeController [20] - Entering to WelcomeController

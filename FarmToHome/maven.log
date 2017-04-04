@@ -1,0 +1,43 @@
++ Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Building FarmToHome Maven Webapp
+[INFO]    task-segment: [clean, install, tomcat7:run]
+[INFO] ------------------------------------------------------------------------
+[INFO] [clean:clean {execution: default-clean}]
+[INFO] Deleting directory D:\mcs060p\FarmToHome\target
+[INFO] [resources:resources {execution: default-resources}]
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] [compiler:compile {execution: default-compile}]
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to D:\mcs060p\FarmToHome\target\classes
+[INFO] [resources:testResources {execution: default-testResources}]
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\mcs060p\FarmToHome\src\test\resources
+[INFO] [compiler:testCompile {execution: default-testCompile}]
+[INFO] No sources to compile
+[INFO] [surefire:test {execution: default-test}]
+[INFO] No tests to run.
+[INFO] [war:war {execution: default-war}]
+[INFO] Packaging webapp
+[INFO] Assembling webapp[FarmToHome] in [D:\mcs060p\FarmToHome\target\FarmToHome]
+[INFO] Processing war project
+[INFO] Copying webapp resources[D:\mcs060p\FarmToHome\src\main\webapp]
+[INFO] Webapp assembled in[327 msecs]
+[INFO] Building war: D:\mcs060p\FarmToHome\target\FarmToHome.war
+[INFO] [install:install {execution: default-install}]
+[INFO] Installing D:\mcs060p\FarmToHome\target\FarmToHome.war to C:\Users\794162.INDIA\.m2\repository\com\farn2home\FarmToHome\1.0-SNAPSHOT\FarmToHome-1.0-SNAPSHOT.war
+[INFO] Preparing tomcat7:run
+[INFO] [resources:resources {execution: default-resources}]
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] [compiler:compile {execution: default-compile}]
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to D:\mcs060p\FarmToHome\target\classes
+[INFO] [tomcat7:run {execution: default-cli}]
+[INFO] Running war on http://localhost:8080/FarmToHome
+[INFO] Creating Tomcat server configuration at D:\mcs060p\FarmToHome\target\tomcat
+[INFO] create webapp with contextPath: /FarmToHome
