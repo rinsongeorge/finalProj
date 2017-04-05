@@ -62,4 +62,10 @@ public class WelcomeController {
 		return "admin"; 	
 	}
 	
+	@RequestMapping(value = "/Payment")
+	public String paymentPage(){ 
+		logger.info("Rendering Product checkout Payment Page");
+		return "payment"; 	
+	}
+	
 }
