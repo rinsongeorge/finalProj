@@ -5,11 +5,9 @@
 		<ul class="nav">
 		
 			<% _.each(data.category, function(category, index) { %>
-				<li><a href="javascript:void(0)"><%=category.categoryName%></a></li>
+				<li><a href="/FarmToHome/List"><%=category.categoryName%></a></li>
 			<%})%>
-
-			<li><a href="javascript:void(0)">About</a></li>
-			<li><a href="javascript:void(0)">Contact</a></li>
+			<li><a href="/FarmToHome/Contact">Contact</a></li>
 		 </ul>
 	</div>
 	<div class="side_banner">
@@ -59,7 +57,7 @@ for(i = 0 ; i < limit ; i++){
 				<div class="view view-first">
 					<a href="javascript:void(0)">
 					<div class="inner_content clearfix">
-					<div class="product_image">
+					<div class="product_image" data-productid="<%=data.newProducts[j].productID%>">
 						<img src="<%=data.newProducts[j].productImage%>" class="img-responsive" alt="">
 					<div class="mask">
 					<div class="info">Quick View</div>
@@ -103,7 +101,7 @@ for(i = 0 ; i < limit ; i++){
 				<div class="view view-first">
 					<a href="javascript:void(0)">
 					<div class="inner_content clearfix">
-					<div class="product_image">
+					<div class="product_image" data-productid="<%=data.topProducts[j].productID%>">
 						<img src="<%=data.topProducts[j].productImage%>" class="img-responsive" alt="">
 					<div class="mask">
 					<div class="info">Quick View</div>
@@ -142,7 +140,7 @@ for(i = 0 ; i < limit ; i++){
 				<div class="view view-first">
 					<a href="javascript:void(0)">
 					<div class="inner_content clearfix">
-					<div class="product_image">
+					<div class="product_image" data-productid="<%=data.recommendedProducts[j].productID%>">
 						<img src="<%=data.recommendedProducts[j].productImage%>" class="img-responsive" alt="">
 					<div class="mask">
 					<div class="info">Quick View</div>

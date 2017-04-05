@@ -5,7 +5,8 @@
 <html>
 <head>
 <title>Farm to Home</title>
-<link href="resources/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- <link href="/resources/static/css/bootstrap.css" rel='stylesheet' type='text/css' /> -->
+<link href="<c:url value='/resources/static/css/bootstrap.css' />" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="resources/static/js/jquery.min.js"></script>
 <!-- Custom Theme files -->

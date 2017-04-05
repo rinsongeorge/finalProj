@@ -22,6 +22,19 @@ F2F.homePage = function() {
 				loadProductAvailabilityTemplate(data);
 			}
 		};
+		var loadTemplateView = function(){
+
+			var categories = $('.menu_box > ul > li');
+			var products = $('div.product_image');
+			/*
+			categories.off('click.selectCategory').on('click.selectCategory', function(){
+				alert('clicked ---> ' + $(this).text());
+			});
+			*/
+			products.off('click.products').on('click.products', function(){
+				alert('clicked ---> ' + $(this).find('div.cart-left p').text());
+			});
+		};
 		var loadProductAvailabilityTemplate = function(data){
 			$.get('resources/static/templates/productAvailability.tpl', function(tpl) {
 				var template = window._.template(tpl, { 
@@ -30,6 +43,7 @@ F2F.homePage = function() {
 				var container = $('.main-row');
 				container.children().remove();
 				container.append(template);
+				loadTemplateView();
 			});
 		};
 		getHomeAvailability();
