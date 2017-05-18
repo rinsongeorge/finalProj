@@ -5,20 +5,18 @@
 			<h3 class="menu_head">Menu</h3>
 			<ul class="nav">
 				<% _.each(data.category, function(category, index) { %>
-					<li><a href="javascript:void(0)"><%=category.categoryName%></a></li>
+					<li data-categoryid="<%=category.categoryID%>"><a href="/FarmToHome/List"><%=category.categoryName%></a></li>
 				<%})%>
-				<li><a href="javascript:void(0)">About</a></li>
-				<li><a href="javascript:void(0)">Contact</a></li>
+				<li><a href="/FarmToHome/Contact">Contact</a></li>
 			 </ul>
 		</div>
 		<div class="tags">
 			<h4 class="tag_head">Tags Widget</h4>
 			<ul class="tags_links">
 				<% _.each(data.category, function(category, index) { %>
-				<li><a href="javascript:void(0)"><%=category.categoryName%></a></li>
-			<%})%>
+					<li data-categoryid="<%=category.categoryID%>"><a href="/FarmToHome/List"><%=category.categoryName%></a></li>
+				<%})%>
 			</ul>
-			<a href="javascript:void(0)" class="link1">View all tags</a>
 		</div>
 		<div class="side_banner">
 			<div class="banner_img"><img src="resources/static/images/pic9.jpg" class="img-responsive" alt=""></div> 
@@ -28,20 +26,18 @@
 		<div class="dreamcrub">
 			<ul class="breadcrumbs">
 				<li class="home">
-					<a href="javascript:void(0)" title="Go to Home Page">Home</a>&nbsp;
+					<a href="/FarmToHome" title="Go to Home Page">Home</a>&nbsp;
 					<span>&gt;</span>
 				</li>
 				<li class="home">&nbsp;
-					Apparel&nbsp;
+					Bucket&nbsp;
 					<span>&gt;</span>&nbsp;
 				</li>
 				<li class="women">
-					Women
+					<%=localStorage['List-Name']%>
 				</li>
 			</ul>
-			<ul class="previous">
-			<li><a href="javascript:void(0)">Back to Previous Page</a></li>
-			</ul>
+	
 			<div class="clearfix"></div>
 		</div>
 
@@ -49,7 +45,7 @@
 			<div class="sort">
 				<div class="sort-by">
 					<label>Sort By</label>
-					<select id="rinson">
+					<select id="sort-by">
 					    <option value="">Position</option>
 					    <option value="">Name</option>
 					    <option value="">Price</option>
@@ -58,11 +54,6 @@
 				</div>
 			</div>
 
-			<ul class="women_pagenation dc_paginationA dc_paginationA06">
-			     <li><a href="javascript:void(0)" class="previous">Page:</a></li>
-			     <li class="active"><a href="javascript:void(0)">1</a></li>
-			     <li><a href="javascript:void(0)">2</a></li>
-			</ul>
 			<div class="clearfix"></div>		
 		</div>
 
@@ -85,11 +76,11 @@
 			<ul>
 				<% _.each(data.products, function(product, index) { %>
 
-					<li>
+					<li data-unitprice="<%=product.productUnitPrice%>">
 						<a class="cbp-vm-image" href="javascript:void(0)">
 							<div class="view view-first">
 								<div class="inner_content clearfix">
-									<div class="product_image">
+									<div class="product_image" data-productid="<%=product.productID%>">
 										<img src="<%=product.productImage%>" class="img-responsive" alt="">
 										<div class="mask">
 										<div class="info">Quick View</div>
@@ -98,7 +89,7 @@
 										<div class="cart-left">
 										<p class="title"><%=product.productName%></p>
 										</div>
-										<div class="price"><%=product.currency%> <%=product.productUnitPrice%></div>
+										<div class="price"><span>&#8377; &nbsp;</span> <%=product.productUnitPrice%></div>
 											<div class="clearfix"></div>
 										</div>		
 									</div>
@@ -108,7 +99,7 @@
 						<div class="cbp-vm-details">
 						<%=product.productDescription%>
 						</div>
-						<a class="cbp-vm-icon cbp-vm-add" href="javascript:void(0)">Add to cart</a>
+						
 					</li>
 					
 				<%})%>

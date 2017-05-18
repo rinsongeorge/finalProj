@@ -225,19 +225,7 @@
 			</div>
 		 </div>
 		</div>
-		<div class="container">
-		  <div class="brands">
-			 <ul class="brand_icons">
-				<li><img src='resources/static/images/icon1.jpg' class="img-responsive" alt=""/></li>
-				<li><img src='resources/static/images/icon2.jpg' class="img-responsive" alt=""/></li>
-				<li><img src='resources/static/images/icon3.jpg' class="img-responsive" alt=""/></li>
-				<li><img src='resources/static/images/icon4.jpg' class="img-responsive" alt=""/></li>
-				<li><img src='resources/static/images/icon5.jpg' class="img-responsive" alt=""/></li>
-				<li><img src='resources/static/images/icon6.jpg' class="img-responsive" alt=""/></li>
-				<li class="last"><img src='resources/static/images/icon7.jpg' class="img-responsive" alt=""/></li>
-			 </ul>
-		   </div>
-	    </div>
+		
 	    <div class="container">
 	     
 	      <ul class="footer_social">

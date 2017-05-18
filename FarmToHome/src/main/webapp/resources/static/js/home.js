@@ -8,7 +8,7 @@ F2F.homePage = function() {
 	var getLoadHomePage = function(){	
 		var getHomeAvailability = function(){
 			$.ajax({
-				url: 'resources/static/json/availabilty.json?' + '&rnd' + new Date().getTime() + '&',
+				url: '/FarmToHome/availability?' + '&rnd' + new Date().getTime() + '&',
 				dataType: 'json',
 				type: 'get',
 				beforeSend: function(){},
@@ -25,14 +25,31 @@ F2F.homePage = function() {
 		var loadTemplateView = function(){
 
 			var categories = $('.menu_box > ul > li');
+			var tagCategories = $('.tags > ul.tags_links >li');
 			var products = $('div.product_image');
-			/*
-			categories.off('click.selectCategory').on('click.selectCategory', function(){
-				alert('clicked ---> ' + $(this).text());
+			
+			categories.off('click.selectCategory').on('click.selectCategory', function(e){
+				e.preventDefault();
+				var categoryId = $(this).data('categoryid');
+				var categoryLink = $(this).find('a');
+				localStorage['List'] = categoryId;
+				localStorage['List-Name'] = categoryLink.text();
+				window.location.href = categoryLink.attr('href');
 			});
-			*/
+			
+			tagCategories.off('click.selectTagCategory').on('click.selectTagCategory', function(e){
+				e.preventDefault();
+				var categoryId = $(this).data('categoryid');
+				var categoryLink = $(this).find('a');
+				localStorage['List'] = categoryId;
+				localStorage['List-Name'] = categoryLink.text();
+				window.location.href = $(this).find('a').attr('href');
+			});
+
 			products.off('click.products').on('click.products', function(){
-				alert('clicked ---> ' + $(this).find('div.cart-left p').text());
+				var productId = $(this).data('productid');
+				localStorage['ProductId'] = productId;
+				window.location.href = '/FarmToHome/Review';
 			});
 		};
 		var loadProductAvailabilityTemplate = function(data){

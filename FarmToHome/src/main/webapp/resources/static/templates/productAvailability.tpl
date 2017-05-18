@@ -5,7 +5,7 @@
 		<ul class="nav">
 		
 			<% _.each(data.category, function(category, index) { %>
-				<li><a href="/FarmToHome/List"><%=category.categoryName%></a></li>
+				<li data-categoryid="<%=category.categoryID%>"><a href="/FarmToHome/List"><%=category.categoryName%></a></li>
 			<%})%>
 			<li><a href="/FarmToHome/Contact">Contact</a></li>
 		 </ul>
@@ -18,10 +18,9 @@
 	<h4 class="tag_head">Tags Widget</h4>
 		<ul class="tags_links">
 			<% _.each(data.category, function(category, index) { %>
-				<li><a href="javascript:void(0)"><%=category.categoryName%></a></li>
+				<li data-categoryid="<%=category.categoryID%>"><a href="/FarmToHome/List"><%=category.categoryName%></a></li>
 			<%})%>
 		</ul>
-		<a href="javascript:void(0)" class="link1">View all tags</a>
 	</div>
 
 	<div class="tags">
@@ -66,7 +65,7 @@ for(i = 0 ; i < limit ; i++){
 					<div class="cart-left">
 						<p class="title"><%=data.newProducts[j].productName%></p>
 					</div>
-					<div class="price"><%=data.newProducts[j].currency%> <%=data.newProducts[j].productUnitPrice%></div>
+					<div class="price"><span>&#8377; &nbsp;</span> <%=data.newProducts[j].productUnitPrice%></div>
 					<div class="clearfix"></div>
 					</div>		
 					</div>
@@ -110,7 +109,7 @@ for(i = 0 ; i < limit ; i++){
 					<div class="cart-left">
 						<p class="title"><%=data.topProducts[j].productName%></p>
 					</div>
-					<div class="price"><%=data.topProducts[j].currency%> <%=data.topProducts[j].productUnitPrice%></div>
+					<div class="price"><span>&#8377; &nbsp;</span> <%=data.topProducts[j].productUnitPrice%></div>
 					<div class="clearfix"></div>
 					</div>		
 					</div>	
@@ -149,7 +148,7 @@ for(i = 0 ; i < limit ; i++){
 					<div class="cart-left">
 						<p class="title"><%=data.recommendedProducts[j].productName%></p>
 					</div>
-					<div class="price"><%=data.recommendedProducts[j].currency%> <%=data.recommendedProducts[j].productUnitPrice%></div>
+					<div class="price"><span>&#8377; &nbsp;</span> <%=data.recommendedProducts[j].productUnitPrice%></div>
 					<div class="clearfix"></div>
 					</div>		
 					</div>	

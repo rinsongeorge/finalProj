@@ -78,7 +78,7 @@
 								</fieldset>
 
 								<fieldset>
-									<select>
+									<select required>
 										<option selected>Choose Category</option>
 										<option>2</option>
 										<option>3</option>
@@ -92,7 +92,7 @@
 								</fieldset>
 								<fieldset>
 									<label>Select product image</label>
-									<input id="input-2" name="productImage" type="file" multiple>
+									<input id="input-2" name="productImage" type="file" multiple required>
 								</fieldset>
 								<fieldset>
 								  <input placeholder="Price" type="text" tabindex="4" required>

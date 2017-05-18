@@ -1,43 +1,63 @@
-+ Error stacktraces are turned on.
+[INFO] Error stacktraces are turned on.
 [INFO] Scanning for projects...
+[INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
-[INFO] Building FarmToHome Maven Webapp
-[INFO]    task-segment: [clean, install, tomcat7:run]
+[INFO] Building FarmToHome Maven Webapp 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] [clean:clean {execution: default-clean}]
-[INFO] Deleting directory D:\mcs060p\FarmToHome\target
-[INFO] [resources:resources {execution: default-resources}]
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ FarmToHome ---
+[INFO] Deleting C:\Users\rinson\git\finalProj\FarmToHome\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ FarmToHome ---
 [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] Copying 1 resource
-[INFO] [compiler:compile {execution: default-compile}]
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ FarmToHome ---
 [INFO] Changes detected - recompiling the module!
 [WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
-[INFO] Compiling 3 source files to D:\mcs060p\FarmToHome\target\classes
-[INFO] [resources:testResources {execution: default-testResources}]
+[INFO] Compiling 13 source files to C:\Users\rinson\git\finalProj\FarmToHome\target\classes
+[INFO] /C:/Users/rinson/git/finalProj/FarmToHome/src/main/java/com/farmtohome/controller/ServiceController.java: C:\Users\rinson\git\finalProj\FarmToHome\src\main\java\com\farmtohome\controller\ServiceController.java uses unchecked or unsafe operations.
+[INFO] /C:/Users/rinson/git/finalProj/FarmToHome/src/main/java/com/farmtohome/controller/ServiceController.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ FarmToHome ---
 [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] skip non existing resourceDirectory D:\mcs060p\FarmToHome\src\test\resources
-[INFO] [compiler:testCompile {execution: default-testCompile}]
+[INFO] skip non existing resourceDirectory C:\Users\rinson\git\finalProj\FarmToHome\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ FarmToHome ---
 [INFO] No sources to compile
-[INFO] [surefire:test {execution: default-test}]
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ FarmToHome ---
 [INFO] No tests to run.
-[INFO] [war:war {execution: default-war}]
+[INFO] 
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ FarmToHome ---
 [INFO] Packaging webapp
-[INFO] Assembling webapp[FarmToHome] in [D:\mcs060p\FarmToHome\target\FarmToHome]
+[INFO] Assembling webapp [FarmToHome] in [C:\Users\rinson\git\finalProj\FarmToHome\target\FarmToHome]
 [INFO] Processing war project
-[INFO] Copying webapp resources[D:\mcs060p\FarmToHome\src\main\webapp]
-[INFO] Webapp assembled in[327 msecs]
-[INFO] Building war: D:\mcs060p\FarmToHome\target\FarmToHome.war
-[INFO] [install:install {execution: default-install}]
-[INFO] Installing D:\mcs060p\FarmToHome\target\FarmToHome.war to C:\Users\794162.INDIA\.m2\repository\com\farn2home\FarmToHome\1.0-SNAPSHOT\FarmToHome-1.0-SNAPSHOT.war
-[INFO] Preparing tomcat7:run
-[INFO] [resources:resources {execution: default-resources}]
+[INFO] Copying webapp resources [C:\Users\rinson\git\finalProj\FarmToHome\src\main\webapp]
+[INFO] Webapp assembled in [412 msecs]
+[INFO] Building war: C:\Users\rinson\git\finalProj\FarmToHome\target\FarmToHome.war
+[INFO] WEB-INF\web.xml already added, skipping
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ FarmToHome ---
+[INFO] Installing C:\Users\rinson\git\finalProj\FarmToHome\target\FarmToHome.war to C:\Users\rinson\.m2\repository\com\farn2home\FarmToHome\1.0-SNAPSHOT\FarmToHome-1.0-SNAPSHOT.war
+[INFO] Installing C:\Users\rinson\git\finalProj\FarmToHome\pom.xml to C:\Users\rinson\.m2\repository\com\farn2home\FarmToHome\1.0-SNAPSHOT\FarmToHome-1.0-SNAPSHOT.pom
+[INFO] 
+[INFO] >>> tomcat7-maven-plugin:2.2:run (default-cli) > process-classes @ FarmToHome >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ FarmToHome ---
 [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] Copying 1 resource
-[INFO] [compiler:compile {execution: default-compile}]
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ FarmToHome ---
 [INFO] Changes detected - recompiling the module!
 [WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
-[INFO] Compiling 3 source files to D:\mcs060p\FarmToHome\target\classes
-[INFO] [tomcat7:run {execution: default-cli}]
+[INFO] Compiling 13 source files to C:\Users\rinson\git\finalProj\FarmToHome\target\classes
+[INFO] /C:/Users/rinson/git/finalProj/FarmToHome/src/main/java/com/farmtohome/controller/ServiceController.java: C:\Users\rinson\git\finalProj\FarmToHome\src\main\java\com\farmtohome\controller\ServiceController.java uses unchecked or unsafe operations.
+[INFO] /C:/Users/rinson/git/finalProj/FarmToHome/src/main/java/com/farmtohome/controller/ServiceController.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] <<< tomcat7-maven-plugin:2.2:run (default-cli) < process-classes @ FarmToHome <<<
+[INFO] 
+[INFO] --- tomcat7-maven-plugin:2.2:run (default-cli) @ FarmToHome ---
 [INFO] Running war on http://localhost:8080/FarmToHome
-[INFO] Creating Tomcat server configuration at D:\mcs060p\FarmToHome\target\tomcat
+[INFO] Creating Tomcat server configuration at C:\Users\rinson\git\finalProj\FarmToHome\target\tomcat
 [INFO] create webapp with contextPath: /FarmToHome
