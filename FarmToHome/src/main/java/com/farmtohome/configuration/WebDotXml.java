@@ -25,8 +25,4 @@ public class WebDotXml extends  AbstractAnnotationConfigDispatcherServletInitial
         return new String[] { "/" };
     }
     
-    @Override
-    protected Filter[] getServletFilters() {
-    	return new Filter[] { new HiddenHttpMethodFilter() };
-    }
 }

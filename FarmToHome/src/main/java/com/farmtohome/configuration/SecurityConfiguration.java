@@ -26,22 +26,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
 	BasicDataSource dataSource;
-	/*
-	@Autowired
-    public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("rinson").password("root").roles("USER");
-        auth.inMemoryAuthentication().withUser("admin").password("root").roles("ADMIN");
-    }*/
-	
-	/*
-	@Autowired
-	 public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
-		
-	   auth.jdbcAuthentication().dataSource(dataSource)   
-	  .usersByUsernameQuery("select Email as username,Password as password, true from user where Email=?") 
-	  .authoritiesByUsernameQuery("select Email as username, RoleName as role from user,role where user.Role = role.id and user.Email=?");
-	   
-	 }*/
 	
 	@Autowired
 	public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
