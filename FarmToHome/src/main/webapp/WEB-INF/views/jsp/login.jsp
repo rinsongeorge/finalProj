@@ -37,6 +37,13 @@
 		});
 		</script>
 <!----details-product-slider--->
+<script>
+	var F2F = {};
+</script>
+<script src="resources/static/js/bootstrap.js"></script>
+<script src="resources/static/js/underscore.js"></script>
+<script src="resources/static/js/common.js"></script>
+
 </head>
 <body>
    <div class="single">
@@ -67,8 +74,8 @@
 		 </div>  
 		 <div class="apparel_box">
 			<ul class="login">
-				<li class="login_text"><a href="javascript:void(0)">Login</a></li>
-				<li class="wish"><a href="javascript:void(0)">Wish List</a></li>
+				<li class="login_text"><a href="<c:url value='/Login'/>">Login</a></li>
+				<!-- <li class="wish"><a href="javascript:void(0)">Wish List</a></li> -->
 				<div class='clearfix'></div>
 		    </ul>
 		    <div class="cart_bg">
@@ -84,7 +91,7 @@
 			 </div>
 			 <ul class="quick_access">
 				<li class="view_cart"><a href="javascript:void(0)">View Cart</a></li>
-				<li class="check"><a href="javascript:void(0)">Checkout</a></li>
+				<li class="check"><a href="<c:url value='/Checkout'/>">Checkout</a></li>
 				<div class='clearfix'></div>
 		     </ul>
 			<div class="search">
@@ -120,7 +127,7 @@
 			    <div class="dreamcrub">
 			   	 <ul class="breadcrumbs">
                     <li class="home">
-                       <a href="javascript:void(0)" title="Go to Home Page">Home</a>&nbsp;
+                       <a href="<c:url value='/'/>" title="Go to Home Page">Home</a>&nbsp;
                        <span>&gt;</span>
                     </li>
                     <li class="home">&nbsp;
@@ -140,22 +147,26 @@
 			   <div class="col-md-6 login-left">
 			  	 <h3>NEW CUSTOMERS</h3>
 				 <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
-				 <a class="acount-btn" href="javascript:void(0)">Create an Account</a>
+				 <a class="acount-btn" href="<c:url value='/Join'/>">Create an Account</a>
 			   </div>
 			   <div class="col-md-6 login-right">
 			  	<h3>REGISTERED CUSTOMERS</h3>
 				<p>If you have an account with us, please log in.</p>
-				<form>
+				<c:if test = "${status == 'added'}">
+					<p style="color: red;">User registered, Please log in.</p>
+				</c:if>
+				<form action="" method="post">
 				  <div>
 					<span>Email Address<label>*</label></span>
-					<input type="text" placeholder="Email Address"> 
+					<input type="text"  name="ssoId" placeholder="Email Address"> 
 				  </div>
 				  <div>
 					<span>Password<label>*</label></span>
-					<input type="password" placeholder="Password"> 
+					<input type="password" name="password" placeholder="Password"> 
 				  </div>
 				  <a class="forgot" href="#">Forgot Your Password?</a>
 				  <input type="submit" value="Login">
+				  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 			    </form>
 			   </div>	
 			   <div class="clearfix"> </div>
@@ -238,5 +249,24 @@
 			    </div>
         	</div>
         </div>
+	<div id="myCartModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+		<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Cart Items</h4>
+				</div>
+				<div class="modal-body">
+					<input type="text" class="form-control" id="pincode" maxlength="6">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" id="addToCart" class="btn btn-info">Proceed</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>		

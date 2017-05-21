@@ -3,6 +3,8 @@
  */
 package com.farmtohome.configuration;
 
+import java.util.Properties;
+
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -12,6 +14,9 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
+
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -66,9 +71,24 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
     }
  
 	
-	/*@Bean
-	public PersistenceExceptionTranslationPostProcessor 
-			persistenceExceptionTranslationPostProcessor(){
-		return new PersistenceExceptionTranslationPostProcessor();
-	}*/
+	@Bean
+    public JavaMailSender eMailSender(){
+		
+		JavaMailSenderImpl mailSender = new JavaMailSenderImpl();   
+		
+        mailSender.setHost("smtp.gmail.com");
+        mailSender.setPort(587);
+        mailSender.setUsername("Your-gmail-id"); // need to set
+        mailSender.setPassword("Your-gmail-password"); // need to set
+         
+        Properties javaMailProperties = new Properties();
+        javaMailProperties.put("mail.smtp.starttls.enable", "true");
+        javaMailProperties.put("mail.smtp.auth", "true");
+        javaMailProperties.put("mail.transport.protocol", "smtp");
+        javaMailProperties.put("mail.debug", "true");//Prints out everything on screen
+         
+        mailSender.setJavaMailProperties(javaMailProperties);
+        return mailSender;
+	}
+
 }

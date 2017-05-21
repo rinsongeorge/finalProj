@@ -1,37 +1,32 @@
-/**
- * 
- *//*
+
 package com.farmtohome.configuration;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
+import javax.servlet.Filter;
 
-import org.springframework.web.WebApplicationInitializer;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-import org.springframework.web.servlet.DispatcherServlet;
-
-import ch.qos.logback.classic.ViewStatusMessagesServlet;
+import org.springframework.web.filter.HiddenHttpMethodFilter;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 
 
-
-*//**
- * @author 794162
- *
- *//*
-public class WebDotXml implements  WebApplicationInitializer {
+public class WebDotXml extends  AbstractAnnotationConfigDispatcherServletInitializer  {
 	
-	public void onStartup(ServletContext container) throws ServletException {
-
-		AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
-		ctx.register(SpringWebConfig.class);
-		ctx.setServletContext(container);
-		
-		ServletRegistration.Dynamic servlet = container.addServlet("dispatcher", new DispatcherServlet(ctx));
-		servlet.setLoadOnStartup(1);
-		servlet.addMapping("/");	
-		
-	}
+	@Override
+    protected Class<?>[] getRootConfigClasses() {
+        return new Class[] { SpringWebConfig.class };
+    }
+  
+    @Override
+    protected Class<?>[] getServletConfigClasses() {
+        return null;
+    }
+  
+    @Override
+    protected String[] getServletMappings() {
+        return new String[] { "/" };
+    }
+    
+    @Override
+    protected Filter[] getServletFilters() {
+    	return new Filter[] { new HiddenHttpMethodFilter() };
+    }
 }
-*/

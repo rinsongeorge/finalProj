@@ -42,6 +42,7 @@
 <script>
 	var F2F = {};
 </script>
+<script src="resources/static/js/bootstrap.js"></script>
 <script src="resources/static/js/underscore.js"></script>
 <script src="resources/static/js/home.js"></script>
 
@@ -83,8 +84,8 @@
 				   	<div class="banner-wrap">
 				   	       <div class="bannertop_box">
 				   		 		<ul class="login">
-				   		 			<li class="login_text"><a href="javascript:void(0)">Login</a></li>
-				   		 			<li class="wish"><a href="javascript:void(0)">Wish List</a></li>
+				   		 			<li class="login_text"><a href="<c:url value='/Login'/>">Login</a></li>
+				   		 			<!-- <li class="wish"><a href="javascript:void(0)">Wish List</a></li> -->
 				   		 			<div class='clearfix'></div>
 				   		 		</ul>
 				   		 		<div class="cart_bg">
@@ -100,7 +101,7 @@
 							  	</div>
 							  	<ul class="quick_access">
 				   		 			<li class="view_cart"><a href="javascript:void(0)">View Cart</a></li>
-				   		 			<li class="check"><a href="javascript:void(0)">Checkout</a></li>
+				   		 			<li class="check"><a href="<c:url value='/Checkout'/>">Checkout</a></li>
 				   		 			<div class='clearfix'></div>
 				   		 		</ul>
 				   		 		<div class="search">
@@ -124,8 +125,8 @@
 				   	   <div class="banner-wrap">
 				   	      <div class="bannertop_box">
 				   		 		<ul class="login">
-				   		 			<li class="login_text"><a href="#">Login</a></li>
-				   		 			<li class="wish"><a href="#">Wish List</a></li>
+				   		 			<li class="login_text"><a href="<c:url value='/Login'/>">Login</a></li>
+				   		 			<!-- <li class="wish"><a href="#">Wish List</a></li> -->
 				   		 			<div class='clearfix'></div>
 				   		 		</ul>
 				   		 		<div class="cart_bg">
@@ -141,7 +142,7 @@
 							  	</div>
 							  	<ul class="quick_access">
 				   		 			<li class="view_cart"><a href="#">View Cart</a></li>
-				   		 			<li class="check"><a href="#">Checkout</a></li>
+				   		 			<li class="check"><a href="<c:url value='/Checkout'/>">Checkout</a></li>
 				   		 			<div class='clearfix'></div>
 				   		 		</ul>
 				   		 		<div class="search">
@@ -165,8 +166,8 @@
 				   	  <div class="banner-wrap">
 				   	       <div class="bannertop_box">
 				   		 		<ul class="login">
-				   		 			<li class="login_text"><a href="javascript:void(0)">Login</a></li>
-				   		 			<li class="wish"><a href="#">Wish List</a></li>
+				   		 			<li class="login_text"><a href="<c:url value='/Login'/>">Login</a></li>
+				   		 			<!-- <li class="wish"><a href="#">Wish List</a></li> -->
 				   		 			<div class='clearfix'></div>
 				   		 		</ul>
 				   		 		<div class="cart_bg">
@@ -182,7 +183,7 @@
 							  	</div>
 							  	<ul class="quick_access">
 				   		 			<li class="view_cart"><a href="#">View Cart</a></li>
-				   		 			<li class="check"><a href="#">Checkout</a></li>
+				   		 			<li class="check"><a href="<c:url value='/Checkout'/>">Checkout</a></li>
 				   		 			<div class='clearfix'></div>
 				   		 		</ul>
 				   		 		<div class="search">
@@ -225,7 +226,19 @@
 			</div>
 		 </div>
 		</div>
-		
+		<div class="container">
+		  <div class="brands">
+			 <ul class="brand_icons">
+				<li><img src='resources/static/images/icon1.jpg' class="img-responsive" alt=""/></li>
+				<li><img src='resources/static/images/icon2.jpg' class="img-responsive" alt=""/></li>
+				<li><img src='resources/static/images/icon3.jpg' class="img-responsive" alt=""/></li>
+				<li><img src='resources/static/images/icon4.jpg' class="img-responsive" alt=""/></li>
+				<li><img src='resources/static/images/icon5.jpg' class="img-responsive" alt=""/></li>
+				<li><img src='resources/static/images/icon6.jpg' class="img-responsive" alt=""/></li>
+				<li class="last"><img src='resources/static/images/icon7.jpg' class="img-responsive" alt=""/></li>
+			 </ul>
+		   </div>
+	    </div>
 	    <div class="container">
 	     
 	      <ul class="footer_social">
@@ -299,5 +312,23 @@
 			    </div>
         	</div>
         </div>
+	<div id="myCartModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+		<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Cart Items</h4>
+				</div>
+				<div class="modal-body">
+					<input type="text" class="form-control" id="pincode" maxlength="6">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" id="addToCart" class="btn btn-info">Proceed</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>		

@@ -37,6 +37,9 @@
 		});
 		</script>
 <!----details-product-slider--->
+<script src="resources/static/js/bootstrap.js"></script>
+<script src="resources/static/js/underscore.js"></script>
+<script src="resources/static/js/common.js"></script>
 </head>
 <body>
    <div class="map">
@@ -76,7 +79,7 @@
 			    <div class="dreamcrub">
 			   	 <ul class="breadcrumbs">
                     <li class="home">
-                       <a href="index.html" title="Go to Home Page">Home</a>&nbsp;
+                       <a href="<c:url value='/'/>" title="Go to Home Page">Home</a>&nbsp;
                        <span>&gt;</span>
                     </li>
                     <li class="women">
@@ -209,5 +212,24 @@
 			    </div>
         	</div>
         </div>
+	<div id="myCartModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+		<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Cart Items</h4>
+				</div>
+				<div class="modal-body">
+					<input type="text" class="form-control" id="pincode" maxlength="6">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" id="addToCart" class="btn btn-info">Proceed</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>		

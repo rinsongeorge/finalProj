@@ -63,6 +63,11 @@ F2F.productPage = function() {
 			function asc_sort_byPrice(a, b){
 				return ($(b).data('unitprice')) < ($(a).data('unitprice')) ? 1 : -1;    
 			}
+
+			$('.view_cart a').off('click.view_cart').on('click.view_cart', function(e){
+				e.preventDefault();
+				$('#myCartModal').modal('show'); 
+			});
 		};
 
 		var onSuccess = function(data){

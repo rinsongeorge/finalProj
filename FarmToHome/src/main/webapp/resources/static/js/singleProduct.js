@@ -1,8 +1,8 @@
 F2F.singleProduct = function() {
 	
 	// Global variables
-
-
+	var token = $("meta[name='_csrf']").attr("content");
+	var header = $("meta[name='_csrf_header']").attr("content");
 	// Methods
 
 	var getSingleProductPage = function(){	
@@ -50,6 +50,11 @@ F2F.singleProduct = function() {
 				var productId = $(this).data('productid');
 				localStorage['ProductId'] = productId;
 				window.location.href = '/FarmToHome/Review';
+			});
+
+			$('.view_cart a').off('click.view_cart').on('click.view_cart', function(e){
+				e.preventDefault();
+				$('#myCartModal').modal('show'); 
 			});
 
 			$('.popup-with-zoom-anim').magnificPopup({
@@ -158,6 +163,9 @@ F2F.singleProduct = function() {
 						contentType: 'application/json;',
 						type: 'post',
 						data : JSON.stringify(data),
+						beforeSend: function(xhr){
+							 xhr.setRequestHeader(header, token);
+						},
 						success: function(data){ console.log(data)}
 					});
 				}

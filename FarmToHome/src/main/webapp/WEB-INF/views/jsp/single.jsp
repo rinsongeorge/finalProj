@@ -13,6 +13,8 @@
 <link href="resources/static/css/component.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="_csrf" content="${_csrf.token}"/>
+<meta name="_csrf_header" content="${_csrf.headerName}"/>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
 <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
@@ -109,8 +111,8 @@
 		 </div>  
 		 <div class="apparel_box">
 			<ul class="login">
-				<li class="login_text"><a href="javascript:void(0)">Login</a></li>
-				<li class="wish"><a href="javascript:void(0)">Wish List</a></li>
+				<li class="login_text"><a href="<c:url value='/Login'/>">Login</a></li>
+				<!-- <li class="wish"><a href="javascript:void(0)">Wish List</a></li> -->
 				<div class='clearfix'></div>
 		    </ul>
 		    <div class="cart_bg">
@@ -126,7 +128,7 @@
 			 </div>
 			 <ul class="quick_access">
 				<li class="view_cart"><a href="javascript:void(0)">View Cart</a></li>
-				<li class="check"><a href="javascript:void(0)">Checkout</a></li>
+				<li class="check"><a href="<c:url value='/Checkout'/>">Checkout</a></li>
 				<div class='clearfix'></div>
 		     </ul>
 			<div class="search">
@@ -222,20 +224,56 @@
 		<div class="modal-dialog modal-sm">
 		<!-- Modal content-->
 			<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Enter PinCode</h4>
-			</div>
-			<div class="modal-body">
-				<input type="text" class="form-control" id="pincode" maxlength="6">
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" id="addToCart" class="btn btn-info">Proceed</button>
-			</div>
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Enter PinCode</h4>
+				</div>
+				<div class="modal-body">
+					<input type="text" class="form-control" id="pincode" maxlength="6">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" id="addToCart" class="btn btn-info">Proceed</button>
+				</div>
 			</div>
 		</div>
 	</div>
-
+	
+	<div id="myCartModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+		<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Cart Items</h4>
+				</div>
+				<div class="modal-body">
+					<input type="text" class="form-control" id="pincode" maxlength="6">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" id="addToCart" class="btn btn-info">Proceed</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="myCartModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+		<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Cart Items</h4>
+				</div>
+				<div class="modal-body">
+					<input type="text" class="form-control" id="pincode" maxlength="6">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" id="addToCart" class="btn btn-info">Proceed</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>		

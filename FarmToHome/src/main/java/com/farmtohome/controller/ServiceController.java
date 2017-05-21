@@ -12,20 +12,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.ServletContextAware;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.farmtohome.service.ProductService;
+import com.farmtohome.service.UserService;
 import com.farmtohome.vo.Availability;
 import com.farmtohome.vo.CartItem;
 import com.farmtohome.vo.Category;
 import com.farmtohome.vo.Product;
 import com.farmtohome.vo.ProductDetailsVO;
 import com.farmtohome.vo.ProductsVO;
+import com.farmtohome.vo.RegistrationForm;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
@@ -41,6 +45,9 @@ public class ServiceController {
 	
 	@Autowired
 	ProductService productService;
+	
+	@Autowired
+	UserService userService;
 	
 	@Autowired
 	ServletContext servletContext;
@@ -103,5 +110,15 @@ public class ServiceController {
 	public CartItem addToCart(@RequestBody CartItem cartItem){
 		return cartItem;
 	}
-
+	
+	@RequestMapping(value = "/doRegister", method = RequestMethod.POST)
+	public ModelAndView register(@ModelAttribute RegistrationForm registrationForm){
+		
+		String status = userService.addUser(registrationForm);
+		if(status.equalsIgnoreCase("added")){	
+			return new ModelAndView("login", "status", status);
+		}else {
+			return new ModelAndView("register", "status", status);
+		}
+	}
 }

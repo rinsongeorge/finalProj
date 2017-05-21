@@ -51,6 +51,11 @@ F2F.homePage = function() {
 				localStorage['ProductId'] = productId;
 				window.location.href = '/FarmToHome/Review';
 			});
+
+			$('.view_cart a').off('click.view_cart').on('click.view_cart', function(e){
+				e.preventDefault();
+				$('#myCartModal').modal('show'); 
+			});
 		};
 		var loadProductAvailabilityTemplate = function(data){
 			$.get('resources/static/templates/productAvailability.tpl', function(tpl) {
