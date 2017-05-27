@@ -5,8 +5,12 @@ package com.farmtohome.service;
 
 import java.util.List;
 
+import javax.servlet.ServletContext;
+
+import com.farmtohome.vo.CartItem;
 import com.farmtohome.vo.Category;
 import com.farmtohome.vo.Product;
+import com.farmtohome.vo.ShoppingCart;
 
 /**
  * @author rinson
@@ -25,4 +29,6 @@ public interface ProductService {
 	public List<Category> getCategory();
 
 	public Product getProduct(String productId);
+
+	public ShoppingCart addToShoppingCart(CartItem cartItem, ServletContext servletContext);
 }

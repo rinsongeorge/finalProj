@@ -2,6 +2,7 @@ package com.farmtohome.controller;
 
 import java.security.Principal;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.farmtohome.service.UserService;
+import com.farmtohome.vo.ShoppingCart;
 import com.farmtohome.vo.TestVo;
 import com.farmtohome.vo.User;
 
@@ -25,6 +27,9 @@ public class WelcomeController {
 	
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	ServletContext servletContext;
 	
 	@RequestMapping(value = "/")
 	public String welcomePage(){ 
@@ -50,6 +55,10 @@ public class WelcomeController {
 		String userId = principal.getName(); 
 		User user = userService.getUser(userId);
 		request.getSession().setAttribute("userDetails", user);
+		
+		ShoppingCart shoppingCart = (ShoppingCart) servletContext.getAttribute("shoppingCart");	
+		request.getSession().setAttribute("sessionShoppingCart", shoppingCart);
+		
 	    model.addAttribute("username", userId);
 		return "checkout"; 	
 	}

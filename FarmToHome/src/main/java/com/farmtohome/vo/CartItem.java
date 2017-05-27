@@ -14,6 +14,17 @@ public class CartItem {
 	private int qty;
 	
 	private String pinCode;
+	
+	private Product product;
+	
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
 
 	public String getProductId() {
 		return productId;

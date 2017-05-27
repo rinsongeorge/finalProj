@@ -3,23 +3,35 @@
  */
 package com.farmtohome.configuration;
 
-import java.util.Date;
+import javax.servlet.annotation.WebListener;
+import javax.servlet.http.HttpSessionEvent;
+import javax.servlet.http.HttpSessionListener;
 
-import org.springframework.context.ApplicationEvent;
-import org.springframework.context.ApplicationListener;
-import org.springframework.security.web.session.HttpSessionCreatedEvent;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Component;
 
 /**
  * @author rinson
  *
  */
 
-
-public class WebSessionListener implements ApplicationListener<HttpSessionCreatedEvent>{
+@Component
+@WebListener
+public class WebSessionListener implements HttpSessionListener{
 
 	@Override
-	public void onApplicationEvent(HttpSessionCreatedEvent event) {
-		
-		System.out.println("--------------Session Created-----------");
+	public void sessionCreated(HttpSessionEvent event) {
+		System.out.println("Session created : " + event.getSession().getId());
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		if(null != auth){
+			System.out.println("Session owner : " + auth.getName());
+		}
 	}
+
+	@Override
+	public void sessionDestroyed(HttpSessionEvent event) {
+		System.out.println("Session destroyed : " + event.getSession().getId());
+	}
+	
 }

@@ -30,6 +30,7 @@ import com.farmtohome.vo.Product;
 import com.farmtohome.vo.ProductDetailsVO;
 import com.farmtohome.vo.ProductsVO;
 import com.farmtohome.vo.RegistrationForm;
+import com.farmtohome.vo.ShoppingCart;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
@@ -107,13 +108,13 @@ public class ServiceController {
 	
 	@RequestMapping(value = "/addToCart", method = RequestMethod.POST)
 	@ResponseBody
-	public CartItem addToCart(@RequestBody CartItem cartItem){
-		return cartItem;
+	public ShoppingCart addToCart(@RequestBody CartItem cartItem){
+		ShoppingCart shoppingCart = productService.addToShoppingCart(cartItem, servletContext);
+		return shoppingCart;
 	}
 	
 	@RequestMapping(value = "/doRegister", method = RequestMethod.POST)
-	public ModelAndView register(@ModelAttribute RegistrationForm registrationForm){
-		
+	public ModelAndView register(@ModelAttribute RegistrationForm registrationForm){	
 		String status = userService.addUser(registrationForm);
 		if(status.equalsIgnoreCase("added")){	
 			return new ModelAndView("login", "status", status);

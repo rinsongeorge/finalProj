@@ -120,6 +120,6 @@
 
     <!-- jQuery -->
     <script src="resources/static/js/jquery.min.js"></script>
-
+	<jsp:include page="/WEB-INF/views/jsp/logout.jsp" />
 </body>
 </html>

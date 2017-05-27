@@ -17,6 +17,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <script src="resources/static/js/jquery.easydropdown.js"></script>
 <!-- Add fancyBox main JS and CSS files -->
@@ -71,13 +72,28 @@
 		 </div>  
 		 <div class="apparel_box">
 			<ul class="login">
-				<li class="login_text"><a href="<c:url value='/Login'/>">Login</a></li>
-				<!-- <li class="wish"><a href="javascript:void(0)">Wish List</a></li> -->
+				<c:choose>  
+					<c:when test="${userDetails eq null}">  
+						<li class="login_text"><a href="<c:url value='/Login'/>">Login</a></li>
+					</c:when>  
+					<c:otherwise>  
+						<li class="login_text logout-link"><a href="#">Logout</a></li>
+					</c:otherwise>  
+				</c:choose>
 				<div class='clearfix'></div>
 		    </ul>
 		    <div class="cart_bg">
 			  <ul class="cart">
-				<i class="cart_icon"></i><p class="cart_desc">$1459.50<br><span class="yellow">2 items</span></p>
+
+				<c:set var="amount" value="0.0"/>
+				<c:set var="itemSize" value="0"/>
+				<c:if test="${shoppingCart ne null && shoppingCart.totalAmount ne null}">
+					<c:set var="amount" value="${shoppingCart.totalAmount}"/>
+					<c:set var="itemSize" value="${shoppingCart.cartItems.size()}"/>
+				</c:if>  
+				<i class="cart_icon"></i><b>&#8377; &nbsp;</b><p class="cart_desc">${amount}<br>
+				<span class="yellow">${itemSize} item(s)</span></p>
+
 			    <div class='clearfix'></div>
 			  </ul>
 			  <ul class="product_control_buttons">
@@ -112,8 +128,8 @@
 				  <div class="form-group">
 					  <label for="PaymentAmount">Payment amount</label>
 					  <div class="amount-placeholder">
-						  <span>$</span>
-						  <span>500.00</span>
+						  <span><b>&#8377;</b></span>
+						  <span>${sessionShoppingCart.totalAmount}</span>
 					  </div>
 				  </div>
 				  <div class="form-group">
@@ -142,7 +158,7 @@
 				  
 				  <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
 					  <span class="submit-button-lock"></span>
-					  <span class="align-middle">Pay $500.00</span>
+					  <span class="align-middle">Pay <b>&#8377; &nbsp;</b> ${sessionShoppingCart.totalAmount}</span>
 				  </button>
 			  </form>
 		  </div>
@@ -151,12 +167,7 @@
 		
 	    <div class="container">
 	      
-	      <ul class="footer_social">
-			<li><a href="#"> <i class="fb"> </i> </a></li>
-			<li><a href="#"><i class="tw"> </i> </a></li>
-			<li><a href="#"><i class="pin"> </i> </a></li>
-			<div class="clearfix"></div>
-		   </ul>
+	      
 	    </div>
         <div class="footer">
 			<div class="container">
@@ -230,15 +241,35 @@
 					<h4 class="modal-title">Cart Items</h4>
 				</div>
 				<div class="modal-body">
-					<input type="text" class="form-control" id="pincode" maxlength="6">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Product Name</th>
+								<th>Product Price</th>
+								<th>Product Quantity</th>
+								<th>Amount</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+						<c:forEach var="cart" items="${sessionShoppingCart.cartItems}">
+							<tr>	
+								<td>${cart.value.product.productName}</td>
+								<td>${cart.value.product.productUnitPrice}</td>
+								<td>${cart.value.qty}</td>
+								<td>${cart.value.qty * cart.value.product.productUnitPrice}</td>
+								<td><a href="#">Edit</a>  /  <a href="#">Delete</a></td>
+							</tr>
+						</c:forEach>
+						</tbody>
+					</table>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" id="addToCart" class="btn btn-info">Proceed</button>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	<jsp:include page="/WEB-INF/views/jsp/logout.jsp" />
 </body>
 </html>		

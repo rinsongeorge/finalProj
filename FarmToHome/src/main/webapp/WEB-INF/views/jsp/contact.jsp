@@ -16,6 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <script src="resources/static/js/jquery.easydropdown.js"></script>
 <!-- Add fancyBox main JS and CSS files -->
@@ -58,17 +59,9 @@
 					<div class="menu_box">
 				   	  	<h3 class="menu_head">Menu</h3>
 				   	     <ul class="nav">
-					   	  	<li><a href="apparel.html">About</a></li>
-					   	  	<li><a href="apparel.html">Apparel</a></li>
-					   	  	<li><a href="apparel.html">Surf Apparel</a></li>
-					   	  	<li><a href="apparel.html">Windsurf</a></li>
-					   	  	<li><a href="apparel.html">Kitesurf</a></li>
-					   	  	<li><a href="apparel.html">Accessories</a></li>
-					   	  	<li><a href="apparel.html">Sale</a></li>
-					   	  	<li><a href="apparel.html">Brands</a></li>
-					   	  	<li><a href="apparel.html">Blog</a></li>
-					   	  	<li><a href="apparel.html">Gadgets</a></li>
-					   	  	<li><a href="contact.html">Contact</a></li>
+					   	  	<c:forEach var="category" items="${categories}">
+								<li data-categoryid="${category.categoryID}"><a href="/FarmToHome/List">${category.categoryName}</a></li>
+							</c:forEach>
 					   	 </ul>
 			   	    </div>
 			   	    <div class="side_banner">
@@ -142,12 +135,7 @@
 		
 	    <div class="container">
 	     
-	      <ul class="footer_social">
-			<li><a href="#"> <i class="fb"> </i> </a></li>
-			<li><a href="#"><i class="tw"> </i> </a></li>
-			<li><a href="#"><i class="pin"> </i> </a></li>
-			<div class="clearfix"></div>
-		   </ul>
+	      
 	    </div>
         <div class="footer">
 			<div class="container">
@@ -221,15 +209,35 @@
 					<h4 class="modal-title">Cart Items</h4>
 				</div>
 				<div class="modal-body">
-					<input type="text" class="form-control" id="pincode" maxlength="6">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Product Name</th>
+								<th>Product Price</th>
+								<th>Product Quantity</th>
+								<th>Amount</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+						<c:forEach var="cart" items="${shoppingCart.cartItems}">
+							<tr>	
+								<td>${cart.value.product.productName}</td>
+								<td>${cart.value.product.productUnitPrice}</td>
+								<td>${cart.value.qty}</td>
+								<td>${cart.value.qty * cart.value.product.productUnitPrice}</td>
+								<td><a href="#">Edit</a>  /  <a href="#">Delete</a></td>
+							</tr>
+						</c:forEach>
+						</tbody>
+					</table>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" id="addToCart" class="btn btn-info">Proceed</button>
 				</div>
 			</div>
 		</div>
 	</div>
-
+<jsp:include page="/WEB-INF/views/jsp/logout.jsp" />
 </body>
 </html>		

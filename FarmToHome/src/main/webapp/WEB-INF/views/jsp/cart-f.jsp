@@ -8,7 +8,16 @@
 </ul>
 <div class="cart_bg">
 	<ul class="cart">
-	   <i class="cart_icon"></i><p class="cart_desc">$1459.50<br><span class="yellow">2 items</span></p>
+		
+		<c:set var="amount" value="0.0"/>
+		<c:set var="itemSize" value="0"/>
+		<c:if test="${shoppingCart ne null && shoppingCart.totalAmount ne null}">
+			<c:set var="amount" value="${shoppingCart.totalAmount}"/>
+			<c:set var="itemSize" value="${shoppingCart.cartItems.size()}"/>
+		</c:if>  
+		<i class="cart_icon"></i><b>&#8377; &nbsp;</b><p class="cart_desc">${amount}<br>
+		<span class="yellow">${itemSize} item(s)</span></p>
+
 	   <div class='clearfix'></div>
 	</ul>
  	<ul class="product_control_buttons">

@@ -166,7 +166,14 @@ F2F.singleProduct = function() {
 						beforeSend: function(xhr){
 							 xhr.setRequestHeader(header, token);
 						},
-						success: function(data){ console.log(data)}
+						success: function(data){ 
+							if(data && data.totalAmount){
+								$('.alert-addcart-response').removeClass('hidden');
+								$('#myModal button.btn-default').trigger('click');
+								$('.alert-addcart-response span').text('Item has been added to the cart successfully');
+								$("html, body").animate({ scrollTop: $('.alert-addcart-response').offset().top }, "slow");
+							}
+						}
 					});
 				}
 			});
