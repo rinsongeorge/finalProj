@@ -124,7 +124,8 @@
 				  <span class="amex"></span>
 				  <span class="discover"></span>
 			  </div>
-			  <form>
+			  <c:url var="paymentUrl" value="/doPayment"/>
+			  <form action="${paymentUrl}" method="post">
 				  <div class="form-group">
 					  <label for="PaymentAmount">Payment amount</label>
 					  <div class="amount-placeholder">

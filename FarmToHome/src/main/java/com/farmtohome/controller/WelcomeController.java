@@ -31,6 +31,9 @@ public class WelcomeController {
 	@Autowired
 	ServletContext servletContext;
 	
+	@Autowired
+	HttpServletRequest httpServletRequest;
+	
 	@RequestMapping(value = "/")
 	public String welcomePage(){ 
 		logger.info("Rendering Welcome Page");
@@ -55,10 +58,8 @@ public class WelcomeController {
 		String userId = principal.getName(); 
 		User user = userService.getUser(userId);
 		request.getSession().setAttribute("userDetails", user);
-		
 		ShoppingCart shoppingCart = (ShoppingCart) servletContext.getAttribute("shoppingCart");	
 		request.getSession().setAttribute("sessionShoppingCart", shoppingCart);
-		
 	    model.addAttribute("username", userId);
 		return "checkout"; 	
 	}
@@ -70,8 +71,17 @@ public class WelcomeController {
 	}
 	
 	@RequestMapping(value = "/Login")
-	public String loginPage(){ 
+	public String loginPage(ModelMap model){ 
 		logger.info("Rendering Product checkout contact Page");
+		if(null != httpServletRequest.getParameter("error")){
+			model.put("loginMsg", "Invalid username or password");
+		}
+		if(null != httpServletRequest.getParameter("logout")){
+			model.put("loginMsg", "Successfully logged out");
+		}
+		if(null != httpServletRequest.getParameter("sessionExpired")){
+			model.put("loginMsg", "Session has expired");
+		}
 		return "login"; 	
 	}
 	

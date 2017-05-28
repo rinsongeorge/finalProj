@@ -129,8 +129,8 @@
 					  			</div>
 				   		 	</div>
 				   		 	<div class="banner_right">
-				   		 		<h1>Feugait<br> 2014</h1>
-				   		 		<p>Super easy going freeride boards based on the X-Cite Ride shape concept with additional cpntrol and super easy jibing.</p>
+				   		 		<h1>Try Organic Food...</h1>
+				   		 		<p>Or as your grandparents called it, food.</p>
 				   		 		<!-- <a href="#" class="banner_btn">Buy Now</a> -->
 				   		 	</div>
 				   		 	<div class='clearfix'></div>
@@ -185,8 +185,8 @@
 					  			</div>
 				   		 	</div>
 				   		 	<div class="banner_right">
-				   		 		<h1>Mutation<br> 2014</h1>
-				   		 		<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+				   		 		<h1>Eat Less...</h1>
+				   		 		<p>from a <b>BOX</b> <br/>and more from <br/><b>EARTH</b></p>
 				   		 		<!-- <a href="#" class="banner_btn">Buy Now</a> -->
 				   		 	</div>
 				   		 	<div class='clearfix'></div>
@@ -237,12 +237,13 @@
 					  			</div>
 					  			<div class="welcome_box">
 					  				<h2>Welcome to Farm to home</h2>
-					  				<p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+					  				<p>Find your veggie</p>
 					  			</div>
 				   		 	</div>
 				   		 	<div class="banner_right">
-				   		 		<h1>Jp Funride<br> 2014</h1>
-				   		 		<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera.</p>
+				   		 		<h1>Eating Organic Isn't Trend</h1>
+				   		 		<p>It's a return to</p>
+								<h1>Tradition</h1>
 				   		 		<!-- <a href="#" class="banner_btn">Buy Now</a> -->
 				   		 	</div>
 				   		 	<div class='clearfix'></div>

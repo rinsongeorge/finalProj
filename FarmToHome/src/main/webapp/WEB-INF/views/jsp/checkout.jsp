@@ -256,7 +256,7 @@
 							</tr>
 						</c:forEach>
 						</tbody>
-					</table>
+					</table> 
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -265,6 +265,50 @@
 		</div>
 	</div>
 	
+	<div id="myAddressModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+		<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Cart Items</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="addr1">Address Line 1 : *</label>
+							<input type="text" class="form-control" id="addr1">
+						</div>
+						<div class="form-group">
+							<label for="addr2">Address Line 2 : </label>
+							<input type="text" class="form-control" id="addr2">
+						</div>
+						<div class="form-group">
+							<label for="addr2">Address Line 3 : </label>
+							<input type="text" class="form-control" id="addr2">
+						</div>
+						<div class="form-group">
+							<label for="addr2">City : </label>
+							<input type="text" class="form-control" id="addr2">
+						</div>
+						<div class="form-group">
+							<label for="addr2">State : </label>
+							<input type="text" class="form-control" id="addr2">
+						</div>
+						<div class="form-group">
+							<label for="addr2">PinCode : </label>
+							<input type="text" class="form-control" id="addr2">
+						</div>
+					</form>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-dismiss="modal">SAVE</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<jsp:include page="/WEB-INF/views/jsp/logout.jsp" />
 
 </body>

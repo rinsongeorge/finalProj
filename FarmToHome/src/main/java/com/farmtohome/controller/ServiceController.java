@@ -26,6 +26,7 @@ import com.farmtohome.service.UserService;
 import com.farmtohome.vo.Availability;
 import com.farmtohome.vo.CartItem;
 import com.farmtohome.vo.Category;
+import com.farmtohome.vo.PaymentForm;
 import com.farmtohome.vo.Product;
 import com.farmtohome.vo.ProductDetailsVO;
 import com.farmtohome.vo.ProductsVO;
@@ -108,9 +109,16 @@ public class ServiceController {
 	
 	@RequestMapping(value = "/addToCart", method = RequestMethod.POST)
 	@ResponseBody
-	public ShoppingCart addToCart(@RequestBody CartItem cartItem){
-		ShoppingCart shoppingCart = productService.addToShoppingCart(cartItem, servletContext);
-		return shoppingCart;
+	public String addToCart(@RequestBody CartItem cartItem){
+		boolean isSellerAvailable = productService.checkSellerAvailability(cartItem.getPinCode());
+		if(isSellerAvailable){
+			ShoppingCart shoppingCart = productService.addToShoppingCart(cartItem, servletContext);
+			return new Gson().toJson(shoppingCart);
+		}else{
+			JsonObject o = new JsonObject();
+			o.addProperty("msg", "Seller is not available for this product. Please choose different PinCode");
+			return o.toString();
+		}
 	}
 	
 	@RequestMapping(value = "/doRegister", method = RequestMethod.POST)
@@ -122,4 +130,11 @@ public class ServiceController {
 			return new ModelAndView("register", "status", status);
 		}
 	}
+	
+	@RequestMapping(value = "/doPayment", method = RequestMethod.POST)
+	public ModelAndView payment(@ModelAttribute PaymentForm paymentForm){
+		
+		return new ModelAndView("confirmBooking");
+	}
+	
 }

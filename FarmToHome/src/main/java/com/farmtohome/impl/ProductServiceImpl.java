@@ -106,7 +106,7 @@ public class ProductServiceImpl implements ProductService{
 	// GET PRODUCT DETAILS AND FIND OUT SUM 
 	@Override
 	public ShoppingCart addToShoppingCart(CartItem cartItem, ServletContext servletContext) {
-	
+			
 		ShoppingCart shoppingCart = (ShoppingCart) servletContext.getAttribute("shoppingCart");	
 		Product product = getProduct(cartItem.getProductId());
 		cartItem.setProduct(product);
@@ -138,5 +138,10 @@ public class ProductServiceImpl implements ProductService{
 		servletContext.setAttribute("shoppingCart", shoppingCart);
 		System.out.println(new Gson().toJson(shoppingCart));
 		return shoppingCart;
+	}
+
+	@Override
+	public boolean checkSellerAvailability(String pinCode) {
+		return genericRepo.sellerAvailabilty(pinCode);
 	}
 }

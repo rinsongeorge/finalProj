@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
@@ -87,5 +88,21 @@ public class GenericRepository {
 			return product;
 		}
 		return null;
+	}
+
+	public boolean sellerAvailabilty(String pinCode) {
+		
+		try{
+			Map<String,Object> row = jdbcTemplate
+					.queryForMap("SELECT user.*  FROM seller inner join user"
+							+ " on seller.UserID = user.UserID where "
+							+ "user.PinCode LIKE '"+ pinCode.substring(0,5) +"%'");
+			if(null != row && !row.isEmpty()){
+				return true;
+			}
+		}catch(EmptyResultDataAccessException e){
+			return false;
+		}
+		return false;
 	}
 }

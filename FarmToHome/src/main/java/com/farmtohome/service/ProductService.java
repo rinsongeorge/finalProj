@@ -31,4 +31,6 @@ public interface ProductService {
 	public Product getProduct(String productId);
 
 	public ShoppingCart addToShoppingCart(CartItem cartItem, ServletContext servletContext);
+
+	public boolean checkSellerAvailability(String pinCode);
 }

@@ -41,6 +41,7 @@
 <script>
 	var F2F = {};
 </script>
+
 <script src="resources/static/js/bootstrap.js"></script>
 <script src="resources/static/js/underscore.js"></script>
 <script src="resources/static/js/common.js"></script>
@@ -165,6 +166,9 @@
 				<p>If you have an account with us, please log in.</p>
 				<c:if test = "${status == 'added'}">
 					<p style="color: red;">User registered, Please log in.</p>
+				</c:if>
+				<c:if test = "${loginMsg ne null}">
+					<p style="color: red;">${loginMsg}</p>
 				</c:if>
 				<form action="" method="post">
 				  <div>
