@@ -126,6 +126,7 @@
 			  </div>
 			  <c:url var="paymentUrl" value="/doPayment"/>
 			  <form action="${paymentUrl}" method="post">
+			  	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 				  <div class="form-group">
 					  <label for="PaymentAmount">Payment amount</label>
 					  <div class="amount-placeholder">
@@ -134,21 +135,21 @@
 					  </div>
 				  </div>
 				  <div class="form-group">
-					  <label or="NameOnCard">Name on card</label>
-					  <input id="NameOnCard"  type="text" maxlength="255"></input>
+					  <label for="nameOnCard">Name on card</label>
+					  <input id="nameOnCard" name="nameOnCard" type="text" maxlength="255"></input>
 				  </div>
 				  <div class="form-group">
-					  <label for="CreditCardNumber">Card number</label>
-					  <input id="CreditCardNumber" class="null card-image form-control" type="text"></input>
+					  <label for="creditCardNumber">Card number</label>
+					  <input id="creditCardNumber" name="creditCardNumber" class="null card-image form-control" type="text"></input>
 				  </div>
 				  <div class="expiry-date-group form-group">
-					  <label for="ExpiryDate">Expiry date</label>
-					  <input id="ExpiryDate"  type="text" placeholder="MM / YY" maxlength="7"></input>
+					  <label for="expiryDate">Expiry date</label>
+					  <input id="ExpiryDate" name="expiryDate" type="text" placeholder="MM / YY" maxlength="7"></input>
 				  </div>
 				  <div class="security-code-group form-group">
 					  <label for="SecurityCode">CVV code</label>
 					  <div class="input-container" >
-						  <input id="SecurityCode"  type="text" ></input>
+						  <input id="SecurityCode" name="securityCode" type="text" ></input>
 						  <i id="cvc" class="fa fa-question-circle"></i>
 					  </div>
 					  <div class="cvc-preview-container two-card hide">
@@ -156,7 +157,32 @@
 						  <div class="visa-mc-dis-cvc-preview"></div>
 					  </div>
 				  </div>
-				  
+				  <br/>	
+				  <p>Shipping Address :</p><br/>
+				  <div class="form-group">
+					  <label for="address1">Address Line 1</label>
+					  <input id="address1" name="address1" type="text" maxlength="255"></input>
+				  </div>
+				  <div class="form-group">
+					  <label for="address2">Address Line 2</label>
+					  <input id="NameOnCard" name="address2" type="text" maxlength="255"></input>
+				  </div>
+				  <div class="form-group">
+					  <label for="address3">Address Line 3</label>
+					  <input id="address3" name="address3" type="text" maxlength="255"></input>
+				  </div>
+				  <div class="form-group">
+					  <label for="city">City</label>
+					  <input id="city" name="city" type="text" maxlength="255"></input>
+				  </div>	
+				  <div class="form-group">
+					  <label for="pincode">Pincode</label>
+					  <input id="pincode" name="pincode" type="text" maxlength="255"></input>
+				  </div>
+				  <div class="form-group">
+					  <label for="mobile">Mobile No:</label>
+					  <input id="mobile" name="mobile" type="text" maxlength="255"></input>
+				  </div>
 				  <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
 					  <span class="submit-button-lock"></span>
 					  <span class="align-middle">Pay <b>&#8377; &nbsp;</b> ${sessionShoppingCart.totalAmount}</span>
@@ -170,69 +196,7 @@
 	      
 	      
 	    </div>
-        <div class="footer">
-			<div class="container">
-				<div class="footer-grid">
-					<h3>Category</h3>
-					<ul class="list1">
-					  <li><a href="#">Home</a></li>
-					  <li><a href="#">About us</a></li>
-					  <li><a href="#">Eshop</a></li>
-					  <li><a href="#">Features</a></li>
-					  <li><a href="#">New Collections</a></li>
-					  <li><a href="#">Blog</a></li>
-					  <li><a href="#">Contact</a></li>
-				    </ul>
-				</div>
-				<div class="footer-grid">
-					<h3>Our Account</h3>
-				    <ul class="list1">
-					  <li><a href="#">Your Account</a></li>
-					  <li><a href="#">Personal information</a></li>
-					  <li><a href="#">Addresses</a></li>
-					  <li><a href="#">Discount</a></li>
-					  <li><a href="#">Orders history</a></li>
-					  <li><a href="#">Addresses</a></li>
-					  <li><a href="#">Search Terms</a></li>
-				    </ul>
-				</div>
-				<div class="footer-grid">
-					<h3>Our Support</h3>
-					<ul class="list1">
-					  <li><a href="#">Site Map</a></li>
-					  <li><a href="#">Search Terms</a></li>
-					  <li><a href="#">Advanced Search</a></li>
-					  <li><a href="#">Mobile</a></li>
-					  <li><a href="#">Contact Us</a></li>
-					  <li><a href="#">Mobile</a></li>
-					  <li><a href="#">Addresses</a></li>
-				    </ul>
-				  </div>
-				  <div class="footer-grid">
-					<h3>Newsletter</h3>
-					<p class="footer_desc">Nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat</p>
-					<div class="search_footer">
-			          <input type="text" class="text" value="Insert Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Insert Email';}">
-			          <input type="submit" value="Submit">
-			        </div>
-			        <img src="resources/static/images/payment.png" class="img-responsive" alt=""/>
-				 </div>
-				 <div class="footer-grid footer-grid_last">
-					<h3>About Us</h3>
-					<p class="footer_desc">Diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,.</p>
-                    <p class="f_text">Phone:  &nbsp;&nbsp;&nbsp;00-250-2131</p>
-                    <p class="email">Email: &nbsp;&nbsp;&nbsp;<span>info(at)Surfhouse.com</span></p>	
-                 </div>
-				 <div class="clearfix"> </div>
-			</div>
-		</div>
-        <div class="footer_bottom">
-        	<div class="container">
-        		<div class="copy">
-				   <p>&copy; 2014 Template by <a href="http://w3layouts.com" target="_blank"> w3layouts</a></p>
-			    </div>
-        	</div>
-        </div>
+      <jsp:include page="/WEB-INF/views/jsp/footer-f.jsp" />
 	<div id="myCartModal" class="modal fade" role="dialog">
 		<div class="modal-dialog modal-lg">
 		<!-- Modal content-->

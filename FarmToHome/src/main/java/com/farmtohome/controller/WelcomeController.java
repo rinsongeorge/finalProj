@@ -103,6 +103,12 @@ public class WelcomeController {
 		return "payment"; 	
 	}
 	
+	@RequestMapping(value = "/	")
+	public String confirmationPage(){ 
+		logger.info("Rendering Product checkout Payment Page");
+		return "payment"; 	
+	}
+	
 	@RequestMapping(value = "/AccessDenied")
 	public String test(){
 		logger.info("Rendering Product Review Page");

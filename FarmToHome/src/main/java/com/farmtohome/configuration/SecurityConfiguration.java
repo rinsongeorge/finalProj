@@ -43,7 +43,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
       http.authorizeRequests()
         .antMatchers("/", "/home","/Review","/List","/Contact","/Join","/register").permitAll()
         .antMatchers("/Admin").access("hasRole('ROLE_ADMIN')")
-        .antMatchers("/Checkout","/Payment").access("hasRole('ROLE_USER')")
+        .antMatchers("/Checkout","/Payment","/ConfirmationPage").access("hasRole('ROLE_USER')")
         .and()
         .csrf()
         .and()

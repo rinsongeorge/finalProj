@@ -22,10 +22,12 @@ import org.springframework.web.context.ServletContextAware;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.farmtohome.service.ProductService;
+import com.farmtohome.service.PaymentService;
 import com.farmtohome.service.UserService;
 import com.farmtohome.vo.Availability;
 import com.farmtohome.vo.CartItem;
 import com.farmtohome.vo.Category;
+import com.farmtohome.vo.Order;
 import com.farmtohome.vo.PaymentForm;
 import com.farmtohome.vo.Product;
 import com.farmtohome.vo.ProductDetailsVO;
@@ -50,6 +52,9 @@ public class ServiceController {
 	
 	@Autowired
 	UserService userService;
+	
+	@Autowired
+	PaymentService paymentService;
 	
 	@Autowired
 	ServletContext servletContext;
@@ -132,9 +137,14 @@ public class ServiceController {
 	}
 	
 	@RequestMapping(value = "/doPayment", method = RequestMethod.POST)
-	public ModelAndView payment(@ModelAttribute PaymentForm paymentForm){
+	public ModelAndView payment(@ModelAttribute PaymentForm form){
 		
-		return new ModelAndView("confirmBooking");
+		System.out.println(form.toString());	
+		Order order = paymentService.capturePayment(form);
+		if(null != order){
+			return new ModelAndView("checkout");
+		}
+		return new ModelAndView("payment");
 	}
 	
 }

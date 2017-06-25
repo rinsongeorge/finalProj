@@ -17,6 +17,15 @@ public class CartItem {
 	
 	private Product product;
 	
+	private int sellerId;
+
+	public int getSellerId() {
+		return sellerId;
+	}
+
+	public void setSellerId(int sellerId) {
+		this.sellerId = sellerId;
+	}
 
 	public Product getProduct() {
 		return product;
