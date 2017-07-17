@@ -15,49 +15,67 @@
 [INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ FarmToHome ---
 [INFO] Changes detected - recompiling the module!
 [WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
-[INFO] Compiling 13 source files to C:\Users\rinson\git\finalProj\FarmToHome\target\classes
+[INFO] Compiling 28 source files to C:\Users\rinson\git\finalProj\FarmToHome\target\classes
 [INFO] /C:/Users/rinson/git/finalProj/FarmToHome/src/main/java/com/farmtohome/controller/ServiceController.java: C:\Users\rinson\git\finalProj\FarmToHome\src\main\java\com\farmtohome\controller\ServiceController.java uses unchecked or unsafe operations.
 [INFO] /C:/Users/rinson/git/finalProj/FarmToHome/src/main/java/com/farmtohome/controller/ServiceController.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ FarmToHome ---
-[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] skip non existing resourceDirectory C:\Users\rinson\git\finalProj\FarmToHome\src\test\resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ FarmToHome ---
-[INFO] No sources to compile
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ FarmToHome ---
-[INFO] No tests to run.
-[INFO] 
-[INFO] --- maven-war-plugin:2.2:war (default-war) @ FarmToHome ---
-[INFO] Packaging webapp
-[INFO] Assembling webapp [FarmToHome] in [C:\Users\rinson\git\finalProj\FarmToHome\target\FarmToHome]
-[INFO] Processing war project
-[INFO] Copying webapp resources [C:\Users\rinson\git\finalProj\FarmToHome\src\main\webapp]
-[INFO] Webapp assembled in [412 msecs]
-[INFO] Building war: C:\Users\rinson\git\finalProj\FarmToHome\target\FarmToHome.war
-[INFO] WEB-INF\web.xml already added, skipping
-[INFO] 
-[INFO] --- maven-install-plugin:2.4:install (default-install) @ FarmToHome ---
-[INFO] Installing C:\Users\rinson\git\finalProj\FarmToHome\target\FarmToHome.war to C:\Users\rinson\.m2\repository\com\farn2home\FarmToHome\1.0-SNAPSHOT\FarmToHome-1.0-SNAPSHOT.war
-[INFO] Installing C:\Users\rinson\git\finalProj\FarmToHome\pom.xml to C:\Users\rinson\.m2\repository\com\farn2home\FarmToHome\1.0-SNAPSHOT\FarmToHome-1.0-SNAPSHOT.pom
-[INFO] 
-[INFO] >>> tomcat7-maven-plugin:2.2:run (default-cli) > process-classes @ FarmToHome >>>
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ FarmToHome ---
-[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] Copying 2 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ FarmToHome ---
-[INFO] Changes detected - recompiling the module!
-[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
-[INFO] Compiling 13 source files to C:\Users\rinson\git\finalProj\FarmToHome\target\classes
-[INFO] /C:/Users/rinson/git/finalProj/FarmToHome/src/main/java/com/farmtohome/controller/ServiceController.java: C:\Users\rinson\git\finalProj\FarmToHome\src\main\java\com\farmtohome\controller\ServiceController.java uses unchecked or unsafe operations.
-[INFO] /C:/Users/rinson/git/finalProj/FarmToHome/src/main/java/com/farmtohome/controller/ServiceController.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] <<< tomcat7-maven-plugin:2.2:run (default-cli) < process-classes @ FarmToHome <<<
-[INFO] 
-[INFO] --- tomcat7-maven-plugin:2.2:run (default-cli) @ FarmToHome ---
-[INFO] Running war on http://localhost:8080/FarmToHome
-[INFO] Creating Tomcat server configuration at C:\Users\rinson\git\finalProj\FarmToHome\target\tomcat
-[INFO] create webapp with contextPath: /FarmToHome
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/rinson/git/finalProj/FarmToHome/src/main/java/com/farmtohome/controller/ServiceController.java:[161,16] cannot find symbol
+  symbol:   class StringS
+  location: class com.farmtohome.controller.ServiceController
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.772 s
+[INFO] Finished at: 2017-07-17T22:35:50+05:30
+[INFO] Final Memory: 17M/140M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:compile (default-compile) on project FarmToHome: Compilation failure
+[ERROR] /C:/Users/rinson/git/finalProj/FarmToHome/src/main/java/com/farmtohome/controller/ServiceController.java:[161,16] cannot find symbol
+[ERROR] symbol:   class StringS
+[ERROR] location: class com.farmtohome.controller.ServiceController
+[ERROR] -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:compile (default-compile) on project FarmToHome: Compilation failure
+/C:/Users/rinson/git/finalProj/FarmToHome/src/main/java/com/farmtohome/controller/ServiceController.java:[161,16] cannot find symbol
+  symbol:   class StringS
+  location: class com.farmtohome.controller.ServiceController
+
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.apache.maven.plugin.compiler.CompilationFailureException: Compilation failure
+/C:/Users/rinson/git/finalProj/FarmToHome/src/main/java/com/farmtohome/controller/ServiceController.java:[161,16] cannot find symbol
+  symbol:   class StringS
+  location: class com.farmtohome.controller.ServiceController
+
+	at org.apache.maven.plugin.compiler.AbstractCompilerMojo.execute(AbstractCompilerMojo.java:909)
+	at org.apache.maven.plugin.compiler.CompilerMojo.execute(CompilerMojo.java:129)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)
+	... 20 more
+[ERROR] 
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

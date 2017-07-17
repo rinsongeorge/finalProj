@@ -3,14 +3,18 @@
  */
 package com.farmtohome.controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.FileCopyUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -58,6 +62,9 @@ public class ServiceController {
 	
 	@Autowired
 	ServletContext servletContext;
+	
+	@Autowired
+	HttpServletRequest request;
 	
 	private final Gson gson = new Gson();
 	
@@ -137,14 +144,50 @@ public class ServiceController {
 	}
 	
 	@RequestMapping(value = "/doPayment", method = RequestMethod.POST)
-	public ModelAndView payment(@ModelAttribute PaymentForm form){
+	public String payment(@ModelAttribute PaymentForm form){
 		
 		System.out.println(form.toString());	
 		Order order = paymentService.capturePayment(form);
 		if(null != order){
-			return new ModelAndView("checkout");
+			request.getSession().setAttribute("order", order);
+			servletContext.removeAttribute("shoppingCart");	
+			return "redirect:/Confirmation";
 		}
-		return new ModelAndView("payment");
+		return "payment";
 	}
 	
+	
+	@RequestMapping(value = "/addProduct", method = RequestMethod.POST)
+	public String addProduct(@ModelAttribute Product product){
+		if(null != product
+				&& null != product.getProductImageFile()){
+			try {
+				String imgPath = servletContext.getRealPath("/resources/static/images");
+				System.out.println("imgPath : "+ imgPath);
+				FileCopyUtils.copy(product.getProductImageFile().getBytes(),
+						new File(imgPath + "/" + product.getProductImageFile().getOriginalFilename()));
+				product.setProductImage(
+						"resources/static/images/" + product.getProductImageFile().getOriginalFilename());
+				product.setProductThumbImage(
+						"resources/static/images/" + product.getProductImageFile().getOriginalFilename());
+				product.setCurrency("INR");
+				if(productService.addProduct(product))
+					return "redirect:/Admin?productUp";
+				else
+					return "redirect:/Admin?productError";
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return "redirect:/Admin?productError";
+	}
+	
+	@RequestMapping(value = "/addCategory", method = RequestMethod.POST)
+	@ResponseBody
+	public boolean addCategory(@ModelAttribute Category category){
+		if(null != category){
+			return productService.addCategory(category);
+		}
+		return false;
+	}
 }

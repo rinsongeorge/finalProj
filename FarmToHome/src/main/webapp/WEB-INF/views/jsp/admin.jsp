@@ -68,42 +68,41 @@
                 <div class="row">
                     <div class="col-lg-12">
 						<div class="product-master-div">
-							<form id="product" action="" method="post">
+							<form id="product" action="/FarmToHome/addProduct" name="product" method="post" enctype="multipart/form-data">
 								<h3>Product Master</h3>
 								<fieldset>
-								  <input placeholder="Product Name" type="text" tabindex="1" required autofocus>
+								  <input placeholder="Product Name" name="productName" type="text" tabindex="1" required autofocus>
 								</fieldset>
 								<fieldset>
-								  <input placeholder="Quantity type" type="text" tabindex="2" required>
+								  <input placeholder="Quantity type" name="productUnitWeight" type="text" tabindex="2" required>
 								</fieldset>
 
 								<fieldset>
-									<select required>
+									<select name="categoryID" required>
 										<option selected>Choose Category</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
+										<c:forEach var="category" items="${categories}">
+											<option value="${category.categoryID}">${category.categoryName}</option>
+										</c:forEach>
 									</select>
 								</fieldset>
 								
 								<fieldset>
-								  <input placeholder="Category" type="text" tabindex="3" required>
+								  <input placeholder="Unit Price" name="productUnitPrice" type="text" tabindex="3" required>
 								</fieldset>
 								<fieldset>
 									<label>Select product image</label>
-									<input id="input-2" name="productImage" type="file" multiple required>
+									<input id="input-2" name="productImageFile" type="file" multiple required>
 								</fieldset>
 								<fieldset>
-								  <input placeholder="Price" type="text" tabindex="4" required>
+								  <input placeholder="Product Description" name="productDescription" type="text" tabindex="4" required>
 								</fieldset>
+								
 								<fieldset>
-								  <input placeholder="Price" type="text" tabindex="4" required>
+								  
+								  <button type="submit">Submit</button>
+								  <button type="reset">Reset</button>
 								</fieldset>
-								<fieldset>
-								  <button name="submit" type="submit">Submit</button>
-								  <button name="reset" type="reset">Reset</button>
-								</fieldset>
+								<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 						  </form>
 						</div>
                     </div>

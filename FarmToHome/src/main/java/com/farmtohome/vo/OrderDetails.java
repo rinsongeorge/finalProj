@@ -1,6 +1,7 @@
 package com.farmtohome.vo;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public class OrderDetails {
 
@@ -15,6 +16,27 @@ public class OrderDetails {
 	public int productId;
 	
 	public int sellerId;
+
+	public String productInfo;
+	
+	public String sellerInfo;
+	
+
+	public String getProductInfo() {
+		return productInfo;
+	}
+
+	public void setProductInfo(String productInfo) {
+		this.productInfo = productInfo;
+	}
+
+	public String getSellerInfo() {
+		return sellerInfo;
+	}
+
+	public void setSellerInfo(String sellerInfo) {
+		this.sellerInfo = sellerInfo;
+	}
 
 	public String getDetailIOrderID() {
 		return detailIOrderID;
@@ -62,6 +84,13 @@ public class OrderDetails {
 
 	public void setSellerId(int sellerId) {
 		this.sellerId = sellerId;
+	}
+
+	@Override
+	public String toString() {
+		return "OrderDetails [detailIOrderID=" + detailIOrderID + ", detailPrice=" + detailPrice + ", detailQuantity="
+				+ detailQuantity + ", total=" + total + ", productId=" + productId + ", sellerId=" + sellerId
+				+ ", productInfo=" + productInfo + ", sellerInfo=" + sellerInfo + "]";
 	} 
 	
 }

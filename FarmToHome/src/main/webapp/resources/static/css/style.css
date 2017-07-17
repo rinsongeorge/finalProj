@@ -2307,3 +2307,7 @@ h3.like, h3.recent {
 	margin-left: 0em;
 }
 }
+
+td{
+	cursor: pointer;
+}

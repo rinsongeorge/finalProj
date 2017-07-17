@@ -14,5 +14,10 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('#logoutForm').submit();
 	});
+
+	$('table#order-table tr').off('click.tr').on('click.tr', function(e){
+		var orderid = $(this).find('td.order-id').html();
+		window.location.href = "/FarmToHome/Order?orderId=" + orderid;
+	});
 	
 });

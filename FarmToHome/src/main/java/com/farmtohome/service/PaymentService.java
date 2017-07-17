@@ -1,5 +1,7 @@
 package com.farmtohome.service;
 
+import java.util.List;
+
 import com.farmtohome.vo.Order;
 import com.farmtohome.vo.OrderDetails;
 import com.farmtohome.vo.PaymentForm;
@@ -14,4 +16,8 @@ public interface PaymentService {
 	public boolean upadatePaymentDetails(PaymentForm form, Order order);
 	
 	public boolean updateShoppingCart(ShoppingCart shoppingCart);
+
+	public List<Order> getUserOrders(int i);
+
+	public List<OrderDetails> getOrderDetails(String orderId);
 }

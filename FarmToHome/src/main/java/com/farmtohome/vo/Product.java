@@ -3,6 +3,8 @@
  */
 package com.farmtohome.vo;
 
+import org.springframework.web.multipart.MultipartFile;
+
 /**
  * @author rinson
  *
@@ -19,6 +21,14 @@ public class Product {
 	private String productThumbImage;
 	private String categoryID;
 	
+	private MultipartFile productImageFile;
+	
+	public MultipartFile getProductImageFile() {
+		return productImageFile;
+	}
+	public void setProductImageFile(MultipartFile productImageFile) {
+		this.productImageFile = productImageFile;
+	}
 	public String getProductID() {
 		return productID;
 	}

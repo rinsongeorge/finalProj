@@ -1,5 +1,6 @@
 package com.farmtohome.impl;
 
+import java.util.List;
 import java.util.Map.Entry;
 
 import javax.servlet.ServletContext;
@@ -12,6 +13,7 @@ import com.farmtohome.repository.GenericRepository;
 import com.farmtohome.service.PaymentService;
 import com.farmtohome.vo.CartItem;
 import com.farmtohome.vo.Order;
+import com.farmtohome.vo.OrderDetails;
 import com.farmtohome.vo.PaymentForm;
 import com.farmtohome.vo.ShoppingCart;
 import com.farmtohome.vo.User;
@@ -81,6 +83,16 @@ public class PaymentServiceImpl implements PaymentService {
 			genericRepo.insertCarts(cart.getValue(), user.getUserID());
 		}
 		return true;
+	}
+
+	@Override
+	public List<Order> getUserOrders(int userID) {
+		return genericRepo.getOrders(userID);
+	}
+
+	@Override
+	public List<OrderDetails> getOrderDetails(String orderId) {
+		return genericRepo.getOrderDets(orderId);
 	}
 
 }

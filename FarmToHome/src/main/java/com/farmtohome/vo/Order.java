@@ -224,5 +224,16 @@ public class Order {
 	public void setOrderDetails(List<OrderDetails> orderDetails) {
 		this.orderDetails = orderDetails;
 	}
+
+	@Override
+	public String toString() {
+		return "Order [OrderID=" + OrderID + ", OrderDate=" + OrderDate + ", OrderAmount=" + OrderAmount + ", Freight="
+				+ Freight + ", Tax=" + Tax + ", OrderShipName=" + OrderShipName + ", OrderShipAddress1="
+				+ OrderShipAddress1 + ", OrderShipAddress2=" + OrderShipAddress2 + ", OrderCity=" + OrderCity
+				+ ", OrderState=" + OrderState + ", OrderPinCode=" + OrderPinCode + ", OrderCountry=" + OrderCountry
+				+ ", OrderPhone=" + OrderPhone + ", OrderMobile=" + OrderMobile + ", OrderEmail=" + OrderEmail
+				+ ", TransactionStatus=" + TransactionStatus + ", Paid=" + Paid + ", ErrMsg=" + ErrMsg + ", ErrLoc="
+				+ ErrLoc + ", Refund=" + Refund + ", PaymentID=" + PaymentID + ", orderDetails=" + orderDetails + "]";
+	}
 	
 }

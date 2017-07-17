@@ -41,13 +41,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http) throws Exception { 
 		
       http.authorizeRequests()
-        .antMatchers("/", "/home","/Review","/List","/Contact","/Join","/register").permitAll()
+        .antMatchers("/", "/home","/Review","/List","/Contact","/Join","/register","/addProduct").permitAll()
         .antMatchers("/Admin").access("hasRole('ROLE_ADMIN')")
-        .antMatchers("/Checkout","/Payment","/ConfirmationPage").access("hasRole('ROLE_USER')")
+        .antMatchers("/Checkout","/Payment","/Confirmation","/Account").access("hasRole('ROLE_USER')")
         .and()
-        .csrf()
-        .and()
-        .exceptionHandling().accessDeniedPage("/AccessDenied");
+        .csrf().disable();
+        /*.and();
+        .exceptionHandling().accessDeniedPage("/AccessDenied");*/
       
       http.formLogin()
       	.loginPage("/Login")

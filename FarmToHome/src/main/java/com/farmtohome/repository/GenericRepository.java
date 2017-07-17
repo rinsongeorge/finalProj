@@ -18,6 +18,7 @@ import org.springframework.util.StringUtils;
 import com.farmtohome.vo.CartItem;
 import com.farmtohome.vo.Category;
 import com.farmtohome.vo.Order;
+import com.farmtohome.vo.OrderDetails;
 import com.farmtohome.vo.PaymentForm;
 import com.farmtohome.vo.Product;
 import com.farmtohome.vo.ShoppingCart;
@@ -153,7 +154,7 @@ public class GenericRepository {
 
 	public Order getOrder(int orderId) {
 		
-		String query = "SELECT * FROM farmtohome.order";
+		String query = "SELECT * FROM `order` order by OrderDate DESC limit 1";
 		try{
 			Map<String,Object> row = jdbcTemplate.queryForMap(query);
 			Order order = new Order();
@@ -245,5 +246,98 @@ public class GenericRepository {
 			return false;
 		}
 		return true;
+	}
+
+	public List<Order> getOrders(int userID) {
+		
+		String query = "SELECT * FROM `order` where OrderUserID=" + userID + " order by OrderDate desc";
+		try{
+			List<Map<String, Object>> rows = jdbcTemplate.queryForList(query);
+			List<Order> orders = new ArrayList<Order>();
+			for(Map<String, Object> row : rows){
+				Order order = new Order();
+				if(null != row && !row.isEmpty()){
+					order.setOrderID(row.get("OrderID").toString());
+					order.setOrderAmount((BigDecimal) row.get("OrderAmount"));
+					order.setOrderDate(row.get("OrderDate").toString());
+					orders.add(order);
+				}
+			}
+			return orders;
+		}catch(Exception e){
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	public List<OrderDetails> getOrderDets(String orderId) {
+		String query = "SELECT od.OrderID,od.DetailPrice,od.DetailQuantity, p.ProductName, s.CompanyName FROM "
+				+ "orderdetails od inner join product p on p.ProductID = od.ProductID inner join seller s on "
+				+ "od.SellerID = s.SellerID where od.OrderID=27";
+		try{
+			List<Map<String, Object>> rows = jdbcTemplate.queryForList(query);
+			List<OrderDetails> orderDetls = new ArrayList<OrderDetails>();
+			for(Map<String, Object> row : rows){
+				OrderDetails orderdts = new OrderDetails();
+				if(null != row && !row.isEmpty()){
+					orderdts.setProductInfo(row.get("ProductName").toString());
+					orderdts.setSellerInfo(row.get("CompanyName").toString());
+					orderdts.setDetailPrice(new BigDecimal(row.get("DetailPrice").toString()));
+					orderdts.setDetailQuantity((Integer) row.get("DetailQuantity"));
+					BigDecimal tot = orderdts.getDetailPrice().multiply(new BigDecimal(orderdts.getDetailQuantity()));
+					orderdts.setTotal(tot);
+					orderDetls.add(orderdts);
+				}
+			}
+			return orderDetls;
+		}catch(Exception e){
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	public boolean addProduct(Product product) {
+		
+		String query = "INSERT INTO `farmtohome`.`product`(`ProductName`,`ProductUnitPrice`,"
+				+ "`ProductUnitWeight`,`ProductDescription`,`ProductImage`,`ProductThumbImage`,"
+				+ "`ProductUpdateDate`,`Active`,`CategoryID`,`Currency`)"
+				+ "VALUES(?,?,?,?,?,?,NOW(),1,?,'INR')";
+		try{
+			int i = jdbcTemplate.update(query, new Object[]{
+					product.getProductName(),
+					Double.valueOf(product.getProductUnitPrice()),
+					product.getProductUnitWeight(),
+					product.getProductDescription(),
+					product.getProductImage(),
+					product.getProductImage(),
+					product.getCategoryID()
+			});
+			if(i > 0) 
+				return true;
+			else
+				return false;
+		}catch(Exception e){
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	public boolean addCategory(Category category) {
+		String query = "INSERT INTO `farmtohome`.`category`"
+				+ "(`CategoryName`,`Description`,`CategoryImage`,`Active`)"
+				+ "VALUES(?,?,'na',1);";
+		try{
+			int i = jdbcTemplate.update(query, new Object[]{
+					category.getCategoryName(),
+					category.getDescription()
+			});
+			if(i > 0) 
+				return true;
+			else
+				return false;
+		}catch(Exception e){
+			e.printStackTrace();
+			return false;
+		}
 	}
 }

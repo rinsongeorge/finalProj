@@ -144,4 +144,14 @@ public class ProductServiceImpl implements ProductService{
 	public boolean checkSellerAvailability(String pinCode) {
 		return genericRepo.sellerAvailabilty(pinCode);
 	}
+
+	@Override
+	public boolean addProduct(Product product) {
+		return genericRepo.addProduct(product);
+	}
+
+	@Override
+	public boolean addCategory(Category category) {
+		return genericRepo.addCategory(category);
+	}
 }
