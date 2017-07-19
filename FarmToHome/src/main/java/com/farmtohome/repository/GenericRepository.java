@@ -20,6 +20,7 @@ import com.farmtohome.vo.Category;
 import com.farmtohome.vo.Order;
 import com.farmtohome.vo.OrderDetails;
 import com.farmtohome.vo.PaymentForm;
+import com.farmtohome.vo.PdfOrder;
 import com.farmtohome.vo.Product;
 import com.farmtohome.vo.ShoppingCart;
 import com.farmtohome.vo.User;
@@ -338,6 +339,31 @@ public class GenericRepository {
 		}catch(Exception e){
 			e.printStackTrace();
 			return false;
+		}
+	}
+
+	public List<PdfOrder> getOrders(String fromDate, String toDate) {
+		
+		String query = "SELECT * FROM farmtohome.order where OrderDate between "
+				+ "Date('"+ fromDate +"') and Date('" + toDate + "')";
+		try{
+			List<Map<String, Object>> rows = jdbcTemplate.queryForList(query);
+			List<PdfOrder> orders = new ArrayList<PdfOrder>();
+			for(Map<String, Object> row : rows){
+				PdfOrder order = new PdfOrder();
+				if(null != row && !row.isEmpty()){
+					order.setOrderId(row.get("OrderID").toString());
+					order.setOrderAmount(row.get("OrderAmount").toString());
+					order.setOrderDate(row.get("OrderDate").toString());
+					order.setOrderShipName(row.get("OrderShipName").toString());
+					order.setOrderStatus(row.get("TransactionStatus").toString());
+					orders.add(order);
+				}
+			}
+			return orders;
+		}catch(Exception e){
+			e.printStackTrace();
+			return null;
 		}
 	}
 }

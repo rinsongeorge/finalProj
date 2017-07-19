@@ -68,37 +68,16 @@
                 <div class="row">
                     <div class="col-lg-12">
 						<div class="product-master-div">
-							<form id="product" action="/FarmToHome/addProduct" name="product" method="post" enctype="multipart/form-data">
-								<h3>Product Master</h3>
+							<form id="product" action="/FarmToHome/addCategory" name="category" method="post">
+								<h3>Category Master</h3>
 								<fieldset>
-								  <input placeholder="Product Name" name="productName" type="text" tabindex="1" required autofocus>
+								  <input placeholder="Category Name" name="categoryName" type="text" tabindex="1" required autofocus>
 								</fieldset>
 								<fieldset>
-								  <input placeholder="Quantity type" name="productUnitWeight" type="text" tabindex="2" required>
+								  <input placeholder="Category Description" name="description" type="text" tabindex="2" required>
 								</fieldset>
 
-								<fieldset>
-									<select name="categoryID" required>
-										<option selected>Choose Category</option>
-										<c:forEach var="category" items="${categories}">
-											<option value="${category.categoryID}">${category.categoryName}</option>
-										</c:forEach>
-									</select>
-								</fieldset>
-								
-								<fieldset>
-								  <input placeholder="Unit Price" name="productUnitPrice" type="text" tabindex="3" required>
-								</fieldset>
-								<fieldset>
-									<label>Select product image</label>
-									<input id="input-2" name="productImageFile" type="file" multiple required>
-								</fieldset>
-								<fieldset>
-								  <input placeholder="Product Description" name="productDescription" type="text" tabindex="4" required>
-								</fieldset>
-								
-								<fieldset>
-								  
+								<fieldset>	  
 								  <button type="submit">Submit</button>
 								  <button type="reset">Reset</button>
 								</fieldset>

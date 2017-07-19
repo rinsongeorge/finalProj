@@ -16,6 +16,9 @@
     <link href="resources/static/css/sb-admin.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="resources/static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
 </head>
 <body>
 	<div class="logo-admin"><img src="resources/static/images/logo.png" alt="" style=""></div>
@@ -68,38 +71,16 @@
                 <div class="row">
                     <div class="col-lg-12">
 						<div class="product-master-div">
-							<form id="product" action="/FarmToHome/addProduct" name="product" method="post" enctype="multipart/form-data">
-								<h3>Product Master</h3>
+							<form id="product" action="/FarmToHome/orderReport" name="product" method="get" >
+								<h3>Order Report</h3>
 								<fieldset>
-								  <input placeholder="Product Name" name="productName" type="text" tabindex="1" required autofocus>
+								 <label>From date :</label> <input placeholder="From Date" name="fromDate" id="fromDate" type="text" tabindex="1" required autofocus>
 								</fieldset>
 								<fieldset>
-								  <input placeholder="Quantity type" name="productUnitWeight" type="text" tabindex="2" required>
+								  <label>To date :</label><input placeholder="To Date" name="toDate" id="toDate" type="text" tabindex="2" required>
 								</fieldset>
-
-								<fieldset>
-									<select name="categoryID" required>
-										<option selected>Choose Category</option>
-										<c:forEach var="category" items="${categories}">
-											<option value="${category.categoryID}">${category.categoryName}</option>
-										</c:forEach>
-									</select>
-								</fieldset>
-								
-								<fieldset>
-								  <input placeholder="Unit Price" name="productUnitPrice" type="text" tabindex="3" required>
-								</fieldset>
-								<fieldset>
-									<label>Select product image</label>
-									<input id="input-2" name="productImageFile" type="file" multiple required>
-								</fieldset>
-								<fieldset>
-								  <input placeholder="Product Description" name="productDescription" type="text" tabindex="4" required>
-								</fieldset>
-								
-								<fieldset>
-								  
-								  <button type="submit">Submit</button>
+								<fieldset> 
+								  <button type="submit">Get Report</button>
 								  <button type="reset">Reset</button>
 								</fieldset>
 								<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
@@ -119,6 +100,14 @@
 
     <!-- jQuery -->
     <script src="resources/static/js/jquery.min.js"></script>
-	<jsp:include page="/WEB-INF/views/jsp/logout.jsp" />
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script>
+         $(function() {
+			$("#fromDate").datepicker({ dateFormat: 'yy-mm-dd'});
+			$("#fromDate").show();
+			$("#toDate").datepicker({ dateFormat: 'yy-mm-dd'});
+         });
+    </script>
+<jsp:include page="/WEB-INF/views/jsp/logout.jsp" />
 </body>
 </html>

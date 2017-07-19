@@ -15,6 +15,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.session.HttpSessionEventPublisher;
 
+
 /**
  * @author 794162
  *
@@ -42,12 +43,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		
       http.authorizeRequests()
         .antMatchers("/", "/home","/Review","/List","/Contact","/Join","/register","/addProduct").permitAll()
-        .antMatchers("/Admin").access("hasRole('ROLE_ADMIN')")
+        .antMatchers("/Admin*").access("hasRole('ROLE_ADMIN')")
         .antMatchers("/Checkout","/Payment","/Confirmation","/Account").access("hasRole('ROLE_USER')")
         .and()
+        .exceptionHandling().accessDeniedPage("/AccessDenied")
+        .and()
         .csrf().disable();
-        /*.and();
-        .exceptionHandling().accessDeniedPage("/AccessDenied");*/
+      
       
       http.formLogin()
       	.loginPage("/Login")

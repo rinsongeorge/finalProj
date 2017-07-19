@@ -12,6 +12,9 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
@@ -40,6 +43,7 @@ import com.farmtohome.vo.RegistrationForm;
 import com.farmtohome.vo.ShoppingCart;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.sun.javafx.collections.ArrayListenerHelper;
 
 /**
  * @author rinson
@@ -183,11 +187,25 @@ public class ServiceController {
 	}
 	
 	@RequestMapping(value = "/addCategory", method = RequestMethod.POST)
-	@ResponseBody
-	public boolean addCategory(@ModelAttribute Category category){
+	public String addCategory(@ModelAttribute Category category){
 		if(null != category){
-			return productService.addCategory(category);
+			if(productService.addCategory(category))
+				return "redirect:/AdminCategory?categoryUp";
+			else
+				return "redirect:/AdminCategory?categoryError";
 		}
-		return false;
+		return "redirect:/AdminCategory?categoryError";
 	}
+	
+	@RequestMapping(value = "/orderReport", method = RequestMethod.GET)
+	public HttpEntity<byte[]> getOrders(@RequestParam String fromDate, @RequestParam String toDate) {
+		byte[] documentBody = productService.createOrderPDF(fromDate, toDate);
+		HttpHeaders header = new HttpHeaders();
+	    header.setContentType(MediaType.parseMediaType("application/pdf"));
+	    header.set(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + System.currentTimeMillis() + ".pdf");
+	    header.setContentLength(documentBody.length);
+	    return new HttpEntity<byte[]>(documentBody, header);
+	}
+	
+	
 }

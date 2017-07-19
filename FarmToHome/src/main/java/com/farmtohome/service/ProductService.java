@@ -37,5 +37,7 @@ public interface ProductService {
 	public boolean addProduct(Product product);
 
 	public boolean addCategory(Category category);
+
+	public byte[] createOrderPDF(String fromDate, String toDate);
 }
 

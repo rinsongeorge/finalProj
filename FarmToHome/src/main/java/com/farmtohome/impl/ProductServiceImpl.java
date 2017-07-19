@@ -3,7 +3,12 @@
  */
 package com.farmtohome.impl;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,9 +24,21 @@ import com.farmtohome.repository.GenericRepository;
 import com.farmtohome.service.ProductService;
 import com.farmtohome.vo.CartItem;
 import com.farmtohome.vo.Category;
+import com.farmtohome.vo.Order;
+import com.farmtohome.vo.PdfOrder;
 import com.farmtohome.vo.Product;
 import com.farmtohome.vo.ShoppingCart;
 import com.google.gson.Gson;
+
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperExportManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
 
 /**
  * @author rinson
@@ -33,6 +50,9 @@ public class ProductServiceImpl implements ProductService{
 	
 	@Autowired
 	GenericRepository genericRepo;
+	
+	@Autowired
+	ServletContext servletContext;
 	               
 	@Override
 	public List<Product> getProducts(String category) {
@@ -153,5 +173,33 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public boolean addCategory(Category category) {
 		return genericRepo.addCategory(category);
+	}
+
+	@Override
+	public byte[] createOrderPDF(String fromDate, String toDate) {
+		
+		try {
+			String path = servletContext.getRealPath("/WEB-INF/jrxml/orderReport.jrxml");
+			InputStream input = new FileInputStream(new File(path));
+			JasperDesign jasperDesign = JRXmlLoader.load(input);
+			JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
+			
+			if(!StringUtils.isEmpty(fromDate)
+					&& !StringUtils.isEmpty(toDate)){
+				/*SimpleDateFormat formater = new SimpleDateFormat("yyyy-MM-dd");
+				Date to = (Date) new SimpleDateFormat("dd/MM/yyyy").parse(toDate);
+				Date from = (Date) new SimpleDateFormat("dd/MM/yyyy").parse(fromDate);*/
+				List<PdfOrder> orders = genericRepo.getOrders(fromDate, toDate);
+				Map parameters = new HashMap();
+				JRBeanCollectionDataSource jrbc = new JRBeanCollectionDataSource(orders);
+				JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, jrbc);
+				return JasperExportManager.exportReportToPdf(jasperPrint);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;	
+		}
+		return null;
 	}
 }

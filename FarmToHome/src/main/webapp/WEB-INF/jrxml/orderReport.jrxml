@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="java_bean" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="orderId" class="java.lang.String"/>
+	<field name="orderDate" class="java.lang.String"/>
+	<field name="orderAmount" class="java.lang.String"/>
+	<field name="orderShipName" class="java.lang.String"/>
+	<field name="orderStatus" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="88" splitType="Stretch">
+			<staticText>
+				<reportElement  x="197" y="10" width="160" height="50"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FARM TO HOME
+
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement  x="217" y="0" width="120" height="33"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order Details]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement  x="30" y="3" width="70" height="20"/>
+				<textElement/>
+				<text><![CDATA[Order ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="110" y="3" width="70" height="20"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Order Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="220" y="3" width="70" height="20"/>
+				<textElement/>
+				<text><![CDATA[Order Amount
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="337" y="3" width="70" height="20"/>
+				<textElement/>
+				<text><![CDATA[Ship name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement  x="450" y="3" width="70" height="23"/>
+				<textElement/>
+				<text><![CDATA[Status
+
+]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement  x="20" y="10" width="70" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{orderId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="100" y="11" width="70" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{orderDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="210" y="10" width="70" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{orderAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="330" y="0" width="70" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{orderShipName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement  x="450" y="10" width="70" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{orderStatus}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

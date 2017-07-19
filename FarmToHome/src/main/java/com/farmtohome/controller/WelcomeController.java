@@ -106,11 +106,41 @@ public class WelcomeController {
 	}
 	
 	@RequestMapping(value = "/Admin")
-	public String adminPage(){ 
+	public String adminPage(ModelMap model, Principal principal,HttpServletRequest request){ 
 		logger.info("Rendering Product checkout Admin Page");
+		
+		String userId = principal.getName(); 
+		User user = userService.getUser(userId);
+		request.getSession().setAttribute("userDetails", user);
+		model.addAttribute("username", userId);
+		
 		List<Category> categories = productService.getCategory();	
 		servletContext.setAttribute("categories", categories);
 		return "admin"; 	
+	}
+	
+	@RequestMapping(value = "/AdminCategory")
+	public String adminCategoryPage(ModelMap model, Principal principal,HttpServletRequest request){ 
+		logger.info("Rendering Product adminCategoryPage Page");
+		
+		String userId = principal.getName(); 
+		User user = userService.getUser(userId);
+		request.getSession().setAttribute("userDetails", user);
+		model.addAttribute("username", userId);
+		
+		return "category"; 	
+	}
+	
+	@RequestMapping(value = "/AdminReports")
+	public String adminReports(ModelMap model, Principal principal,HttpServletRequest request){ 
+		logger.info("Rendering Product adminReports Page");
+		
+		String userId = principal.getName(); 
+		User user = userService.getUser(userId);
+		request.getSession().setAttribute("userDetails", user);
+		model.addAttribute("username", userId);
+		
+		return "report"; 	
 	}
 	
 	@RequestMapping(value = "/Payment")
