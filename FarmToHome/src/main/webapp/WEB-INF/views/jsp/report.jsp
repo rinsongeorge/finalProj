@@ -17,60 +17,20 @@
     <!-- Custom Fonts -->
     <link href="resources/static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	
-	<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-         rel = "stylesheet">
+	<link href = "resources/static/css/jquery-ui.css" rel = "stylesheet">
 </head>
 <body>
 	<div class="logo-admin"><img src="resources/static/images/logo.png" alt="" style=""></div>
     <div id="wrapper">
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header"> 
-                <a class="navbar-brand" href="javascript:void(0)">Farm To Home</a>
-            </div>
-            <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
-               
-               
-                <li class="dropdown">
-                    <a href="javascript:void(0)"><i></i> John Smith</a>    
-                </li>
-				<li>	
-					<a href="javascript:void(0)"><i></i> Logout</a>
-				</li>
-            </ul>
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    
-                    
-                    <li>	
-                        <a href="/FarmToHome/Admin"><i></i> Product Master</a>
-                    </li>
-                    <li>
-                        <a href="/FarmToHome/AdminCategory"><i></i> Category Master</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)"><i></i> User Master</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)"><i></i >Order</a>
-                    </li>       
-                    <li>
-                        <a href="javascript:void(0)"><i></i> Report</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </nav>
+
+      <jsp:include page="/WEB-INF/views/jsp/adminNavBar.jsp" />
 
         <div id="page-wrapper">
-
             <div class="container-fluid">           
                 <div class="row">
                     <div class="col-lg-12">
-						<div class="product-master-div">
+						<div class=" product-master-div">
 							<form id="product" action="/FarmToHome/orderReport" name="product" method="get" >
 								<h3>Order Report</h3>
 								<fieldset>
@@ -89,9 +49,30 @@
                     </div>
                 </div>
 
+				<!-- <div class="row">
+                    <div class="col-lg-12">
+						<div class="report-master-div product-master-div">
+							<form id="product" action="/FarmToHome/orderReport" name="product" method="get" >
+								<h3>Product Report</h3>
+								<fieldset>
+								 <label>From date :</label> <input placeholder="From Date" name="fromDate" id="fromDate" type="text" tabindex="1" required autofocus>
+								</fieldset>
+								<fieldset>
+								  <label>To date :</label><input placeholder="To Date" name="toDate" id="toDate" type="text" tabindex="2" required>
+								</fieldset>
+								<fieldset> 
+								  <button type="submit">Get Report</button>
+								  <button type="reset">Reset</button>
+								</fieldset>
+								<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+						  </form>
+						</div>
+                    </div>
+                </div>
+ -->
             </div>
             <!-- /.container-fluid -->
-
+			
         </div>
         <!-- /#page-wrapper -->
 
@@ -100,7 +81,7 @@
 
     <!-- jQuery -->
     <script src="resources/static/js/jquery.min.js"></script>
-    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src = "resources/static/js/jquery-ui.js"></script>
 	<script>
          $(function() {
 			$("#fromDate").datepicker({ dateFormat: 'yy-mm-dd'});

@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -201,5 +202,39 @@ public class ProductServiceImpl implements ProductService{
 			return null;	
 		}
 		return null;
+	}
+
+	@Override
+	public List<String> getProductNames() {
+		try{
+			List<Product> products = genericRepo.getProductDetails("SELECT * FROM product");
+			if(null != products && !products.isEmpty()){
+				List<String> names = new ArrayList<String>();
+				for(Product prod: products){
+					names.add(prod.getProductName());
+				}
+				return names;
+			}
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public Product getProductByName(String productName) {
+		if(!StringUtils.isEmpty(productName)){
+			try{
+				return genericRepo.getProduct("SELECT * FROM product where ProductName = '"+ productName +"'");
+			}catch(Exception ex){
+				ex.printStackTrace();
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public boolean updateProduct(Product product) {
+		return genericRepo.updateProduct(product);
 	}
 }

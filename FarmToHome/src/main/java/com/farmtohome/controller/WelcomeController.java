@@ -25,6 +25,7 @@ import com.farmtohome.vo.OrderDetails;
 import com.farmtohome.vo.ShoppingCart;
 import com.farmtohome.vo.TestVo;
 import com.farmtohome.vo.User;
+import com.google.gson.Gson;
 
 
 
@@ -142,6 +143,21 @@ public class WelcomeController {
 		
 		return "report"; 	
 	}
+	
+	@RequestMapping(value = "/AdminUpdateProduct")
+	public String updateProduct(ModelMap model, Principal principal,HttpServletRequest request){ 
+		logger.info("Rendering Product updateProduct Page");
+		List<Category> categories = productService.getCategory();
+		servletContext.setAttribute("categories", categories);
+		String userId = principal.getName(); 
+		User user = userService.getUser(userId);
+		request.getSession().setAttribute("userDetails", user);
+		List<String> names = productService.getProductNames();
+		model.addAttribute("username", userId);
+		model.addAttribute("names", new Gson().toJson(names));
+		return "updateProduct"; 	
+	}
+	
 	
 	@RequestMapping(value = "/Payment")
 	public String paymentPage(){ 

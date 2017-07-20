@@ -74,22 +74,22 @@
 	<detail>
 		<band height="53" splitType="Stretch">
 			<textField>
-				<reportElement  x="20" y="10" width="70" height="30"/>
+				<reportElement  x="30" y="10" width="70" height="30"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{orderId}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement  x="100" y="11" width="70" height="30"/>
+				<reportElement  x="110" y="11" width="70" height="30"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{orderDate}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement  x="210" y="10" width="70" height="30"/>
+				<reportElement  x="220" y="10" width="70" height="30"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{orderAmount}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement  x="330" y="0" width="70" height="30"/>
+				<reportElement  x="337" y="0" width="70" height="30"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{orderShipName}]]></textFieldExpression>
 			</textField>

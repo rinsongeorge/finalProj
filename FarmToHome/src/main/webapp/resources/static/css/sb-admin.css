@@ -253,6 +253,10 @@ ul.nav li a {
 	min-height:600px;
 }
 
+.report-master-div {
+	min-height:425px;
+}
+
 #product {
   background: #F9F9F9;
   padding: 25px;

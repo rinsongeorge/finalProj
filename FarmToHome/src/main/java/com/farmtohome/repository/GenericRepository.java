@@ -366,4 +366,29 @@ public class GenericRepository {
 			return null;
 		}
 	}
+
+	public boolean updateProduct(Product product) {
+		String query = "UPDATE product "
+				+ "SET ProductUnitPrice = ?, "
+				+ "ProductUnitWeight = ?, "
+				+ "ProductDescription = ?, "
+				+ "CategoryID = ? "
+				+ "WHERE ProductID = ?";
+		try{
+			int i = jdbcTemplate.update(query, new Object[]{
+					Double.valueOf(product.getProductUnitPrice()),
+					product.getProductUnitWeight(),
+					product.getProductDescription(),
+					Integer.valueOf(product.getCategoryID()),
+					Integer.valueOf(product.getProductID())
+			});
+			if(i > 0) 
+				return true;
+			else
+				return false;
+		}catch(Exception e){
+			e.printStackTrace();
+			return false;
+		}
+	}
 }

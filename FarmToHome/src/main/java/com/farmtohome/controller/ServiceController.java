@@ -123,6 +123,17 @@ public class ServiceController {
 		return null;
 	}
 	
+	
+	@RequestMapping(value = "/productByName")
+	@ResponseBody
+	public String getProductByName(@RequestParam String productName){ 
+		if(!StringUtils.isEmpty(productName)){
+			Product product = productService.getProductByName(productName);
+			return gson.toJson(product);
+		}
+		return null;
+	}
+	
 	@RequestMapping(value = "/addToCart", method = RequestMethod.POST)
 	@ResponseBody
 	public String addToCart(@RequestBody CartItem cartItem){
@@ -207,5 +218,14 @@ public class ServiceController {
 	    return new HttpEntity<byte[]>(documentBody, header);
 	}
 	
-	
+	@RequestMapping(value = "/updateProductDts", method = RequestMethod.POST)
+	public String updateProduct(@ModelAttribute Product product){
+		if(null != product){
+			if(productService.updateProduct(product))
+				return "redirect:/AdminUpdateProduct?updated";
+			else
+				return "redirect:/AdminUpdateProduct?error";
+		}
+		return "redirect:/AdminUpdateProduct?error";
+	}	
 }
